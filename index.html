@@ -37,6 +37,7 @@
       /* Set primary color variable */
       :root {
           --primary-color: #176ABC;
+          --theme-color: #176ABC;
       }
       /* Default button styles */
       .btn-default {
@@ -54,6 +55,94 @@
       }
       a:hover {
           color: #125A8B;
+      }
+      /* Packages Slider Styles */
+      .packages-container {
+          display: flex;
+          overflow-x: auto;
+          gap: 30px;
+          padding-bottom: 20px;
+          scroll-behavior: smooth;
+          scroll-snap-type: x mandatory;
+      }
+      .package-item {
+          min-width: 300px;
+          background: #fff;
+          border-radius: 15px;
+          padding: 30px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          flex-shrink: 0;
+          scroll-snap-align: start;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+      }
+      .treatment-list {
+          list-style: none;
+          padding-left: 0;
+          margin-bottom: 0;
+      }
+      .treatment-list li {
+          margin-bottom: 15px;
+          font-size: 15px;
+          line-height: 1.5;
+      }
+      .treatment-list strong {
+          display: block;
+          color: var(--theme-color);
+          margin-bottom: 5px;
+      }
+      .highlighted-box {
+          border: 2px solid var(--theme-color);
+      }
+      /* Button Styling */
+      .btn-package {
+          display: inline-block;
+          background: var(--theme-color);
+          color: #fff;
+          padding: 10px 20px;
+          border-radius: 5px;
+          text-decoration: none;
+          text-align: center;
+          transition: background 0.3s;
+          margin-top: 15px;
+      }
+      .btn-package:hover {
+          background: #2874a6;
+      }
+      /* Scrollbar Styling */
+      .packages-container::-webkit-scrollbar {
+          height: 8px;
+      }
+      .packages-container::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 10px;
+      }
+      .packages-container::-webkit-scrollbar-thumb {
+          background: var(--theme-color);
+          border-radius: 10px;
+      }
+      /* Slider Navigation */
+      .slider-wrapper {
+          position: relative;
+      }
+      .slider-nav {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          pointer-events: none;
+      }
+      .slider-nav button {
+          background: rgba(0, 0, 0, 0.5);
+          border: none;
+          color: #fff;
+          padding: 10px;
+          border-radius: 50%;
+          cursor: pointer;
+          pointer-events: all;
       }
     </style>
 </head>
@@ -118,22 +207,10 @@
 					<div class="collapse navbar-collapse main-menu">
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item "><a class="nav-link" href="/">Home</a>
-                                    
-                                </li>                                
-                                <li class="nav-item "><a class="nav-link" href="/appoinment/">Appointment</a>
+                                <li class="nav-item "><a class="nav-link" href="/">Home</a></li>
+                                <li class="nav-item "><a class="nav-link" href="/appoinment/">Appointment</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/about/">About Us</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/service">Services</a></li>
-                                <!-- <li class="nav-item submenu"><a class="nav-link" href="./">Services</a>
-                                    <ul class="sub-menu">
-                                        <li class="nav-item"><a class="nav-link" href="service/hijama/">hijama Therapy</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="index-video.html">Home - Video</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="index-slider.html">Home - Slider</a></li>
-                                    </ul>
-                                    
-                                                                                                  
-                                  
-                                </li> -->
                             </ul>
                         </div>
                         <!-- Let’s Start Button Start -->
@@ -156,13 +233,8 @@
         <!-- Video Start -->
         <div class="hero-bg-video">
             <!-- Selfhosted Video Start -->
-            <!-- <video autoplay muted loop id="myVideo"><source src="images/hero-bg-video.mp4" type="video/mp4"></video> -->
             <video autoplay="" muted="" loop="" id="myVideo"><source src="media/REVIV_Website_Vid_1_4d56c78680.mp4" type="video/mp4"></video>
             <!-- Selfhosted Video End -->
-
-            <!-- Youtube Video Start -->
-            <!-- <div id="herovideo" class="player" data-property="{videoURL:'74DWwSxsVSs',containment:'.hero-video', showControls:false, autoPlay:true, loop:true, vol:0, mute:false, startAt:0,  stopAt:296, opacity:1, addRaster:true, quality:'large', optimizeDisplay:true}"></div> -->
-            <!-- Youtube Video End -->
         </div>
         <!-- Video End -->
 		<div class="container">
@@ -180,23 +252,19 @@
                         <!-- Section Title End -->
                     </div>
                     
-                        <!-- Section Title End -->
-
-                        <!-- Hero Content Body Start -->
-                        <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
-                            <a href="/service/" class="btn-default"><span>explore services</span></a>
-                            <a href="/appoinment/" class="btn-default btn-highlighted"><span>book appointment</span></a>
-                        </div>
-                        <!-- Hero Content Body End -->
+                    <!-- Hero Content Body Start -->
+                    <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
+                        <a href="/service/" class="btn-default"><span>explore services</span></a>
+                        <a href="/appoinment/" class="btn-default btn-highlighted"><span>book appointment</span></a>
                     </div>
-                    <!-- Hero Content End -->
+                    <!-- Hero Content Body End -->
                 </div>
             </div>
         </div>
 	</div>
 	<!-- Hero Section End -->
 
-    <!-- Our Benefits Secton Start -->
+    <!-- Our Benefits Section Start -->
     <div class="our-benefits bg-radius-section">
         <div class="container">
             <div class="row">
@@ -244,7 +312,7 @@
             </div>
         </div>
     </div>
-    <!-- Our Benefits Secton End -->
+    <!-- Our Benefits Section End -->
 
     <!-- About Us Section Start -->
 	<div class="about-us bg-radius-section">
@@ -260,7 +328,6 @@
                                 We are a premier wellness center in Thane offering specialized physiotherapy and dermatology services. Our dedicated team provides personalized care to help you achieve optimal health and rejuvenation.
                             </p>
                         </div>
-                        
                         <!-- Section Title End -->
 
                         <!-- About Content Body Start -->
@@ -304,28 +371,6 @@
                                     </div>
                                     <!-- About Content List End -->
                                 </div>
-
-                                <!-- <div class="col-md-6">
-                                    <div class="about-trusted-customer wow fadeInUp" data-wow-delay="0.5s">
-                                        <div class="trusted-customer-image">
-                                            <img src="images/about-trusted-customer-img.png" alt="">
-                                        </div>
-                                        <div class="trusted-customer-rating">
-                                            <ul>
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="trusted-customer-content">
-                                            <p>trusted by <span class="counter">4</span>k+ customers</p>
-                                        </div>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                         <!-- About Content Body End -->
@@ -346,25 +391,21 @@
                                 <img src="images/der1.jpg" alt="">
                             </figure>
                         </div>
-
                         <div class="about-image img-box-2">
                             <figure class="image-anime">
                                 <img src="images/about-us-img-2.jpg" alt="">
                             </figure>
                         </div>
-
                         <div class="about-image img-box-3">
                             <figure class="image-anime">
                                 <img src="images/about-us-img-3.jpg" alt="">
                             </figure>
                         </div>
-
                         <div class="about-image img-box-4">
                             <figure class="image-anime">
                                 <img src="images/der4.jpg" alt="">
                             </figure>
                         </div>
-
                         <div class="about-circle-logo">
                             <img src="images/medzelbglogo.png" alt="">
                         </div>
@@ -403,37 +444,23 @@
                 <div class="col-lg-4 col-md-6">
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp">
-                        <!-- Service Item Image Start -->
                         <div class="service-item-image">
                             <figure>
                                 <img src="images/Dermatology1.jpg" alt="">
                             </figure>
                         </div>
-                        <!-- Service Item Image End -->
-
-                        <!-- Service Item Icon Start -->
                         <div class="icon-box">
                             <img src="images/icon-service-1.svg" alt="">
                         </div>
-                        <!-- Service Item Icon ENd -->
-
-                        <!-- Service Body Start -->
                         <div class="service-body">
-                            <!-- Service Content Start -->
                             <div class="service-content">
                                 <h3>skin therapy</h3>
                                 <p>specialized form of dermatology treatment delivered through precision techniques.</p>
                             </div>
-                            
-                            <!-- Service Content End -->
-
-                             <!-- Service Btn Start -->
                             <div class="service-btn">
                                 <a href="#"><img src="images/arrow-readmore-btn.svg" alt=""></a>
                             </div>
-                            <!-- Service Btn End -->
                         </div>
-                        <!-- Service Body End -->
                     </div>
                     <!-- Service Item End -->
                 </div>
@@ -441,36 +468,23 @@
                 <div class="col-lg-4 col-md-6">
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp" data-wow-delay="0.25s">
-                        <!-- Service Item Image Start -->
                         <div class="service-item-image">
                             <figure>
                                 <img src="images/service-img-2.jpg" alt="">
                             </figure>
                         </div>
-                        <!-- Service Item Image End -->
-
-                        <!-- Service Item Icon Start -->
                         <div class="icon-box">
                             <img src="images/icon-service-2.svg" alt="">
                         </div>
-                        <!-- Service Item Icon ENd -->
-
-                        <!-- Service Body Start -->
                         <div class="service-body">
-                            <!-- Service Content Start -->
                             <div class="service-content">
                                 <h3>chronic pain</h3>
                                 <p>refers to persistent pain even after the underlying injury or illness has healed.</p>
                             </div>
-                            <!-- Service Content End -->
-
-                             <!-- Service Btn Start -->
                             <div class="service-btn">
                                 <a href="#"><img src="images/arrow-readmore-btn.svg" alt=""></a>
                             </div>
-                            <!-- Service Btn End -->
                         </div>
-                        <!-- Service Body End -->
                     </div>
                     <!-- Service Item End -->
                 </div>
@@ -478,37 +492,23 @@
                 <div class="col-lg-4 col-md-6">
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp" data-wow-delay="0.5s">
-                        <!-- Service Item Image Start -->
                         <div class="service-item-image">
                             <figure>
                                 <img src="images/cosmotic2.jpg" alt="">
                             </figure>
                         </div>
-                        <!-- Service Item Image End -->
-
-                        <!-- Service Item Icon Start -->
                         <div class="icon-box">
                             <img src="images/icon-service-3.svg" alt="">
                         </div>
-                        <!-- Service Item Icon ENd -->
-
-                        <!-- Service Body Start -->
                         <div class="service-body">
-                            <!-- Service Content Start -->
                             <div class="service-content">
                                 <h3>cosmetic therapy</h3>
                                 <p>specialized branch of dermatology that focuses exclusively on cosmetic skin treatments.</p>
                             </div>
-                            
-                            <!-- Service Content End -->
-
-                             <!-- Service Btn Start -->
                             <div class="service-btn">
                                 <a href="#"><img src="images/arrow-readmore-btn.svg" alt=""></a>
                             </div>
-                            <!-- Service Btn End -->
                         </div>
-                        <!-- Service Body End -->
                     </div>
                     <!-- Service Item End -->
                 </div>
@@ -516,36 +516,23 @@
                 <div class="col-lg-4 col-md-6">
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp" data-wow-delay="0.75s">
-                        <!-- Service Item Image Start -->
                         <div class="service-item-image">
                             <figure>
                                 <img src="images/service-img-4.jpg" alt="">
                             </figure>
                         </div>
-                        <!-- Service Item Image End -->
-
-                        <!-- Service Item Icon Start -->
                         <div class="icon-box">
                             <img src="images/icon-service-4.svg" alt="">
                         </div>
-                        <!-- Service Item Icon ENd -->
-
-                        <!-- Service Body Start -->
                         <div class="service-body">
-                            <!-- Service Content Start -->
                             <div class="service-content">
                                 <h3>sports therapy</h3>
                                 <p>It is designed to help athletes and active individuals recover quickly improve injuries.</p>
                             </div>
-                            <!-- Service Content End -->
-
-                             <!-- Service Btn Start -->
                             <div class="service-btn">
                                 <a href="#"><img src="images/arrow-readmore-btn.svg" alt=""></a>
                             </div>
-                            <!-- Service Btn End -->
                         </div>
-                        <!-- Service Body End -->
                     </div>
                     <!-- Service Item End -->
                 </div>
@@ -553,36 +540,23 @@
                 <div class="col-lg-4 col-md-6">
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp" data-wow-delay="1s">
-                        <!-- Service Item Image Start -->
                         <div class="service-item-image">
                             <figure>
                                 <img src="images/service-img-5.jpg" alt="">
                             </figure>
                         </div>
-                        <!-- Service Item Image End -->
-
-                        <!-- Service Item Icon Start -->
                         <div class="icon-box">
                             <img src="images/icon-service-5.svg" alt="">
                         </div>
-                        <!-- Service Item Icon ENd -->
-
-                        <!-- Service Body Start -->
                         <div class="service-body">
-                            <!-- Service Content Start -->
                             <div class="service-content">
                                 <h3>cupping therapy</h3>
                                 <p>ancient healing practice where cups are applied to the skin to create suction.</p>
                             </div>
-                            <!-- Service Content End -->
-
-                             <!-- Service Btn Start -->
                             <div class="service-btn">
                                 <a href="#"><img src="images/arrow-readmore-btn.svg" alt=""></a>
                             </div>
-                            <!-- Service Btn End -->
                         </div>
-                        <!-- Service Body End -->
                     </div>
                     <!-- Service Item End -->
                 </div>
@@ -590,36 +564,23 @@
                 <div class="col-lg-4 col-md-6">
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp" data-wow-delay="1.25s">
-                        <!-- Service Item Image Start -->
                         <div class="service-item-image">
                             <figure>
                                 <img src="images/service-img-6.jpg" alt="">
                             </figure>
                         </div>
-                        <!-- Service Item Image End -->
-
-                        <!-- Service Item Icon Start -->
                         <div class="icon-box">
                             <img src="images/icon-service-6.svg" alt="">
                         </div>
-                        <!-- Service Item Icon ENd -->
-
-                        <!-- Service Body Start -->
                         <div class="service-body">
-                            <!-- Service Content Start -->
                             <div class="service-content">
                                 <h3>laser therapy</h3>
                                 <p>non-invasive treatment that uses light energy to promote healing processes.</p>
                             </div>
-                            <!-- Service Content End -->
-
-                             <!-- Service Btn Start -->
                             <div class="service-btn">
                                 <a href="#"><img src="images/arrow-readmore-btn.svg" alt=""></a>
                             </div>
-                            <!-- Service Btn End -->
                         </div>
-                        <!-- Service Body End -->
                     </div>
                     <!-- Service Item End -->
                 </div>
@@ -636,12 +597,6 @@
     </div>
     <div class="bg-section bg-radius-section"></div>
     <!-- Our Services Section End -->
-
-
-    
-
- 
-    
 
     <!-- How It Work Section Start -->
     <div class="how-it-work bg-radius-section">
@@ -713,7 +668,7 @@
                                 </h2>
                                 <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordion">
                                     <div class="accordion-body">
-                                        <p>Some clinics provide an address or an online form for appointment requests. send an email with your preferred times and details.</p>
+                                        <p>Some clinics provide an address or an online form for appointment requests. Send an email with your preferred times and details.</p>
                                     </div>
                                 </div>
                             </div>
@@ -731,7 +686,7 @@
                                 </h2>
                                 <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordion">
                                     <div class="accordion-body">
-                                        <p>The goal of our clinic is to provide friendly, caring dentistry and the highest level of general, cosmetic, ents.</p>
+                                        <p>The goal of our clinic is to provide friendly, caring dentistry and the highest level of general, cosmetic treatments.</p>
                                     </div>
                                 </div>
                             </div>
@@ -749,7 +704,7 @@
                                 </h2>
                                 <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordion">
                                     <div class="accordion-body">
-                                        <p>The goal of our clinic is to provide friendly, caring dentistry and the highest level of general, cosmetic, ents.</p>
+                                        <p>The goal of our clinic is to provide friendly, caring dentistry and the highest level of general, cosmetic treatments.</p>
                                     </div>
                                 </div>
                             </div>
@@ -767,7 +722,7 @@
                                 </h2>
                                 <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordion">
                                     <div class="accordion-body">
-                                        <p>The goal of our clinic is to provide friendly, caring dentistry and the highest level of general, cosmetic, ents.</p>
+                                        <p>The goal of our clinic is to provide friendly, caring dentistry and the highest level of general, cosmetic treatments.</p>
                                     </div>
                                 </div>
                             </div>
@@ -782,7 +737,7 @@
     </div>
     <!-- How It Work Section End -->
 
-    <!-- Our Pricing Section Start -->
+    <!-- Our Packages Section Start -->
     <div class="our-pricing bg-radius-section parallaxie">
         <div class="container">
             <div class="row">
@@ -790,131 +745,179 @@
                     <div class="our-pricing-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h3 class="wow fadeInUp">pricing</h3>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Our Pricing</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.25s">We offer a range of flexible pricing options tailored to meet your physiotherapy needs. Whether you're starting with an initial assessment or seeking long-term care, our plans provide excellent value with expert care.</p>
+                            <h3 class="wow fadeInUp">treatment packages</h3>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">Skin Care Packages</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.25s">
+                                Discover our curated skin treatment packages designed to address various concerns and enhance your natural beauty. Experience personalized care with our advanced therapies.
+                            </p>
                         </div>
                         <!-- Section Title End -->
 
                         <!-- Section Btn Start -->
                         <div class="section-btn wow fadeInUp" data-wow-delay="0.5s">
-                            <a href="/appoinment/" class="btn-default"><span>make an appointment</span></a>
+                            <a href="/appoinment/" class="btn-default"><span>Book Consultation</span></a>
                         </div>
                         <!-- Section Btn End -->
                     </div>
                 </div>
 
                 <div class="col-lg-7">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <!-- Pricing Item Start -->
-                            <div class="pricing-item highlighted-box wow fadeInUp" data-wow-delay="0.25s">
-                                <!-- Pricing Header Start -->
-                                <div class="pricing-header">
-                                    <!-- Pricing Title Start -->
-                                    <div class="pricing-title">
-                                        <h3>starter plan</h3>
-                                    </div>
-                                    <!-- Pricing Title End -->
-
-                                    <!-- Pricing Tag Start -->
-                                    <div class="pricing-tag">
-                                        <h2>$20/<sub>month</sub></h2>
-                                        <p>(Save $10 per user)</p>
-                                    </div>
-                                    <!-- Pricing Tag End -->
-                                </div>
-                                <!-- Pricing Header End -->
-
-                                <!-- Pricing Body Start -->
-                                <div class="pricing-body">
-                                    <!-- Pricing Content Start -->
-                                    <div class="pricing-content">
-                                        <p>This plan is perfect for individuals seeking and pain, improve injuries.</p>
-                                    </div>
-                                    <!-- Pricing Content End -->
-
-                                    <!-- Pricing List Start -->
-                                    <div class="pricing-list">
-                                        <ul>
-                                            <li>Trigger Point Therapy</li>
-                                            <li>Neck Pain Treatment</li>
-                                            <li>Sports Injury Rehabilitation</li>
-                                            <li>Post-Natal Physiotherapy</li>
-                                            <li>Knee Pain Treatment</li>
-                                            <li>Geriatric Physiotherapy</li>
-                                        </ul>
-                                    </div>
-                                    <!-- Pricing List End -->
-                                </div>
-                                <!-- Pricing Body End -->
-
-                                <!-- Pricing Btn Start -->
-                                <div class="pricing-btn">
-                                    <a href="#">choose plan</a>
-                                </div>
-                                <!-- Pricing Btn End -->
-                            </div>
-                            <!-- Pricing Item End -->
+                    <div class="slider-wrapper">
+                        <!-- Navigation Arrows -->
+                        <div class="slider-nav">
+                            <button id="prevBtn">&#10094;</button>
+                            <button id="nextBtn">&#10095;</button>
                         </div>
-
-                        <div class="col-md-6">
-                            <!-- Pricing Item Start -->
-                            <div class="pricing-item wow fadeInUp" data-wow-delay="0.5s">
-                                <!-- Pricing Header Start -->
-                                <div class="pricing-header">
-                                    <!-- Pricing Title Start -->
-                                    <div class="pricing-title">
-                                        <h3>basic plan</h3>
+                        <div class="packages-container" id="packagesContainer">
+                            <!-- Package Item Start -->
+                            <div class="package-item highlighted-box">
+                                <div>
+                                    <div class="pricing-header">
+                                        <h3>Essential Glow Packages</h3>
                                     </div>
-                                    <!-- Pricing Title End -->
-
-                                    <!-- Pricing Tag Start -->
-                                    <div class="pricing-tag">
-                                        <h2>$10/<sub>month</sub></h2>
-                                        <p>(Save $5 per user)</p>
-                                    </div>
-                                    <!-- Pricing Tag End -->
-                                </div>
-                                <!-- Pricing Header End -->
-
-                                <!-- Pricing Body Start -->
-                                <div class="pricing-body">
-                                    <!-- Pricing Content Start -->
-                                    <div class="pricing-content">
-                                        <p>Our Basic Physiotherapy Plan for clients looking treatment.</p>
-                                    </div>
-                                    <!-- Pricing Content End -->
-
-                                    <!-- Pricing List Start -->
-                                    <div class="pricing-list">
-                                        <ul>
-                                            <li>Custom Exercise Programs</li>
-                                            <li>Muscle Strain Treatment</li>
-                                            <li>Tendonitis Treatment</li>
-                                            <li>Fracture Rehabilitation</li>
-                                            <li>Pelvic Floor Physiotherapy</li>
-                                            <li>Neck Pain Treatment</li>
+                                    <div class="pricing-body">
+                                        <ul class="treatment-list">
+                                            <li><strong>Radiance Boost Package</strong> - Deep cleansing facial, hydrating mask, mild exfoliation</li>
+                                            <li><strong>Revital Glow Therapy</strong> - Express medi-facial, vitamin C infusion, gentle peeling</li>
+                                            <li><strong>Pure Skin Detox Plan</strong> - Charcoal detox, blackhead extraction, calming mask</li>
                                         </ul>
                                     </div>
-                                    <!-- Pricing List End -->
                                 </div>
-                                <!-- Pricing Body End -->
-
-                                <!-- Pricing Btn Start -->
-                                <div class="pricing-btn">
-                                    <a href="#">choose plan</a>
-                                </div>
-                                <!-- Pricing Btn End -->
+                                <a href="/book-package/" class="btn-package">Book Package</a>
                             </div>
-                            <!-- Pricing Item End -->
+                            <!-- Package Item End -->
+
+                            <!-- Package Item Start -->
+                            <div class="package-item highlighted-box">
+                                <div>
+                                    <div class="pricing-header">
+                                        <h3>Acne &amp; Scar Solutions</h3>
+                                    </div>
+                                    <div class="pricing-body">
+                                        <ul class="treatment-list">
+                                            <li><strong>Flawless Acne Rescue</strong> - Acne-control peels, LED therapy, sebum regulation</li>
+                                            <li><strong>Scar Erase Therapy</strong> - Microneedling with PRP, laser resurfacing</li>
+                                            <li><strong>Pore Refining Solution</strong> - Hydrafacial, pore-tightening treatment</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a href="/book-package/" class="btn-package">Book Package</a>
+                            </div>
+                            <!-- Package Item End -->
+
+                            <!-- Package Item Start -->
+                            <div class="package-item highlighted-box">
+                                <div>
+                                    <div class="pricing-header">
+                                        <h3>Brightening &amp; Pigmentation</h3>
+                                    </div>
+                                    <div class="pricing-body">
+                                        <ul class="treatment-list">
+                                            <li><strong>Illuminance Revive Plan</strong> - Laser toning, vitamin C infusion</li>
+                                            <li><strong>Luminous Complexion</strong> - Glutathione IV, melanin-reducing peels</li>
+                                            <li><strong>Tan Removal Therapy</strong> - Full-body peels, sun-damage repair</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a href="/book-package/" class="btn-package">Book Package</a>
+                            </div>
+                            <!-- Package Item End -->
+
+                            <!-- Package Item Start -->
+                            <div class="package-item highlighted-box">
+                                <div>
+                                    <div class="pricing-header">
+                                        <h3>Bridal Glow Packages</h3>
+                                    </div>
+                                    <div class="pricing-body">
+                                        <ul class="treatment-list">
+                                            <li><strong>Dulhan Radiance Plan</strong> - Hydrafacials, PRP therapy, IV hydration</li>
+                                            <li><strong>Golden Bridal Elegance</strong> - Skin boosters, Botox, microneedling RF</li>
+                                            <li><strong>Grooming Package</strong> - Laser toning, vitamin therapy</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a href="/book-package/" class="btn-package">Book Package</a>
+                            </div>
+                            <!-- Package Item End -->
+
+                            <!-- Package Item Start -->
+                            <div class="package-item highlighted-box">
+                                <div>
+                                    <div class="pricing-header">
+                                        <h3>Anti-Aging Programs</h3>
+                                    </div>
+                                    <div class="pricing-body">
+                                        <ul class="treatment-list">
+                                            <li><strong>Timeless Youth Program</strong> - PRP therapy, collagen microneedling</li>
+                                            <li><strong>Age Reverse Therapy</strong> - HIFU, Botox, radiofrequency</li>
+                                            <li><strong>Firm &amp; Lift Renewal</strong> - Ultherapy, CO2 laser</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a href="/book-package/" class="btn-package">Book Package</a>
+                            </div>
+                            <!-- Package Item End -->
+
+                            <!-- Package Item Start -->
+                            <div class="package-item highlighted-box">
+                                <div>
+                                    <div class="pricing-header">
+                                        <h3>Specialized Treatments</h3>
+                                    </div>
+                                    <div class="pricing-body">
+                                        <ul class="treatment-list">
+                                            <li><strong>Peel Perfection Program</strong> - Glow peel, pigmentation correction</li>
+                                            <li><strong>Medi-Facial Luxe</strong> - Oxygen infusion, vitamin C mesotherapy</li>
+                                            <li><strong>Laser Radiance Plan</strong> - Q-switch toning, CO2 resurfacing</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a href="/book-package/" class="btn-package">Book Package</a>
+                            </div>
+                            <!-- Package Item End -->
+
+                            <!-- Package Item Start -->
+                            <div class="package-item highlighted-box">
+                                <div>
+                                    <div class="pricing-header">
+                                        <h3>VIP Plans</h3>
+                                    </div>
+                                    <div class="pricing-body">
+                                        <ul class="treatment-list">
+                                            <li><strong>Elite Glow Subscription</strong> - Monthly treatments, priority access</li>
+                                            <li><strong>Celebrity Transformation</strong> - PRP, laser resurfacing, Ultherapy</li>
+                                            <li><strong>Signature Luxe Plan</strong> - Tailored skincare, premium treatments</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a href="/book-package/" class="btn-package">Book Package</a>
+                            </div>
+                            <!-- Package Item End -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Our Pricing Section End -->
+    <!-- Our Packages Section End -->
+
+    <!-- JavaScript for Package Slider -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const container = document.getElementById('packagesContainer');
+          const nextBtn = document.getElementById('nextBtn');
+          const prevBtn = document.getElementById('prevBtn');
+
+          nextBtn.addEventListener('click', () => {
+              container.scrollBy({ left: 320, behavior: 'smooth' });
+          });
+
+          prevBtn.addEventListener('click', () => {
+              container.scrollBy({ left: -320, behavior: 'smooth' });
+          });
+      });
+    </script>
 
     <!-- Therapist Team Section Start -->
     <div class="therapist-team bg-radius-section">
@@ -924,7 +927,7 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">therapist team</h3>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Our dedicated & experienced therapist team</h2>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">Our dedicated &amp; experienced therapist team</h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -942,13 +945,10 @@
                 <div class="col-lg-3 col-md-6">
                     <!-- Team Member Item Start -->
                     <div class="team-member-item wow fadeInUp">
-                        <!-- Team Image Start -->
                         <div class="team-image">
                             <figure class="image-anime">
                                 <img src="images/team-1.jpg" alt="">
                             </figure>
-                
-                            <!-- Team Social Icon Start -->
                             <div class="team-social-icon">
                                 <ul>
                                     <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -957,16 +957,11 @@
                                     <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
                                 </ul>
                             </div>
-                            <!-- Team Social Icon End -->
                         </div>
-                        <!-- Team Image End -->
-                
-                        <!-- Team Content Start -->
                         <div class="team-content">
                             <h3>dr. emily brown</h3>
                             <p>senior physiotherapist</p>
                         </div>
-                        <!-- Team Content End -->
                     </div>
                     <!-- Team Member Item End -->
                 </div>
@@ -974,13 +969,10 @@
                 <div class="col-lg-3 col-md-6">
                     <!-- Team Member Item Start -->
                     <div class="team-member-item wow fadeInUp" data-wow-delay="0.25s">
-                        <!-- Team Image Start -->
                         <div class="team-image">
                             <figure class="image-anime">
                                 <img src="images/team-2.jpg" alt="">
                             </figure>
-                
-                            <!-- Team Social Icon Start -->
                             <div class="team-social-icon">
                                 <ul>
                                     <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -989,16 +981,11 @@
                                     <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
                                 </ul>
                             </div>
-                            <!-- Team Social Icon End -->
                         </div>
-                        <!-- Team Image End -->
-                
-                        <!-- Team Content Start -->
                         <div class="team-content">
                             <h3>dr. lisa johnson</h3>
                             <p>pediatric theraphist</p>
                         </div>
-                        <!-- Team Content End -->
                     </div>
                     <!-- Team Member Item End -->
                 </div>
@@ -1006,13 +993,10 @@
                 <div class="col-lg-3 col-md-6">
                     <!-- Team Member Item Start -->
                     <div class="team-member-item wow fadeInUp" data-wow-delay="0.5s">
-                        <!-- Team Image Start -->
                         <div class="team-image">
                             <figure class="image-anime">
                                 <img src="images/team-3.jpg" alt="">
                             </figure>
-                
-                            <!-- Team Social Icon Start -->
                             <div class="team-social-icon">
                                 <ul>
                                     <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -1021,16 +1005,11 @@
                                     <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
                                 </ul>
                             </div>
-                            <!-- Team Social Icon End -->
                         </div>
-                        <!-- Team Image End -->
-                
-                        <!-- Team Content Start -->
                         <div class="team-content">
                             <h3>dr. jessica wilson</h3>
                             <p>neurological theraphist</p>
                         </div>
-                        <!-- Team Content End -->
                     </div>
                     <!-- Team Member Item End -->
                 </div>
@@ -1038,13 +1017,10 @@
                 <div class="col-lg-3 col-md-6">
                     <!-- Team Member Item Start -->
                     <div class="team-member-item wow fadeInUp" data-wow-delay="0.75s">
-                        <!-- Team Image Start -->
                         <div class="team-image">
                             <figure class="image-anime">
                                 <img src="images/team-4.jpg" alt="">
                             </figure>
-                
-                            <!-- Team Social Icon Start -->
                             <div class="team-social-icon">
                                 <ul>
                                     <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -1053,16 +1029,11 @@
                                     <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
                                 </ul>
                             </div>
-                            <!-- Team Social Icon End -->
                         </div>
-                        <!-- Team Image End -->
-                
-                        <!-- Team Content Start -->
                         <div class="team-content">
                             <h3>dr. linda thomas</h3>
                             <p>orthopedic theraphist</p>
                         </div>
-                        <!-- Team Content End -->
                     </div>
                     <!-- Team Member Item End -->
                 </div>
@@ -1211,6 +1182,36 @@
                                     </div>
                                 </div>
                                 <!-- Testimonial Slide End -->
+                                
+                                <!-- New Testimonial Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-header">
+                                            <div class="testimonial-rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="testimonial-content">
+                                                <p>My experience at Medzeal was exceptional. As an Indian college student, I felt truly cared for during my physiotherapy sessions. Highly recommended!</p>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-body">
+                                            <div class="author-image">
+                                                <figure class="image-anime">
+                                                    <img src="images/author-5.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="author-content">
+                                                <h3>Priya S.</h3>
+                                                <p>College Student</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- New Testimonial Slide End -->
                             </div>
                             <div class="testimonial-btn">
                                 <div class="testimonial-button-prev"></div>
@@ -1224,7 +1225,8 @@
         </div>
     </div>
     <!-- Our Testimonials Section End -->
-<div style="margin-top: 100px;"></div>
+
+    <div style="margin-top: 100px;"></div>
     <!-- Footer Start -->
     <footer class="main-footer bg-radius-section">
         <div class="container">
@@ -1330,7 +1332,7 @@
                         <!-- Footer Contact Details End -->
 
                         <!-- Footer Copyright Section Start -->
-                         <div class="footer-links terms-condition-links">
+                        <div class="footer-links terms-condition-links">
                             <div class="footer-copyright-text">
                                 <p>Copyright 2024 Physiotherapy. All Rights Reserved.</p>
                             </div>
@@ -1340,7 +1342,7 @@
                                     <li><a href="#">terms and conditions</a></li>
                                 </ul>
                             </div>
-                         </div>                        
+                        </div>                        
                         <!-- Footer Copyright Section End -->
                     </div>
                     <!-- About Footer List End -->

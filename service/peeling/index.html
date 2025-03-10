@@ -131,17 +131,17 @@
     <div class="page-service-single bg-radius-section">
         <div class="container">
             <div class="row">
+                <!-- Sidebar Start -->
                 <div class="col-lg-4">
-                    <!-- Service Sidebar Start -->
                     <div class="service-sidebar">
                         <!-- Service Categories List Start -->
                         <div class="service-catagery-list wow fadeInUp">
                             <h3>Our Facial Treatments</h3>
                             <ul>
-                                <li><a href="#">Medzeal Facial</a></li>
-                                <li><a href="#">Exoluxe Facial</a></li>
-                                <li><a href="#">Snail Medifacial</a></li>
-                                <li><a href="#">Vampire Facial</a></li>
+                                <li><a href="#" class="facial-treatment-link">Medzeal Facial</a></li>
+                                <li><a href="#" class="facial-treatment-link">Exoluxe Facial</a></li>
+                                <li><a href="#" class="facial-treatment-link">Snail Medifacial</a></li>
+                                <li><a href="#" class="facial-treatment-link">Vampire Facial</a></li>
                             </ul>
                         </div>
                         <!-- Service Categories List End -->
@@ -163,15 +163,11 @@
 
                         <!-- Sidebar Cta Box Start -->
                         <div class="sidebar-cta-box">
-                            <!-- Sidebar Cta Image Start -->
                             <div class="sidebar-cta-image">
                                 <figure>
                                     <img src="images/sidebar-cta-image.jpg" alt="">
                                 </figure>
                             </div>
-                            <!-- Sidebar Cta Image End -->
-
-                            <!-- Sidebar Cta Item Start -->
                             <div class="sidebar-cta-item">
                                 <div class="icon-box">
                                     <figure>
@@ -183,26 +179,28 @@
                                     <p>+(123) 698-5245</p>
                                 </div>
                             </div>
-                            <!-- Sidebar Cta Item End -->
                         </div>
                         <!-- Sidebar Cta Box End -->
                     </div>
                     <!-- Service Sidebar End -->
                 </div>
+                <!-- Sidebar End -->
 
+                <!-- Main Content Start -->
                 <div class="col-lg-8">
-                    <!-- Service Single Content Start -->
                     <div class="service-single-content">
                         <div class="service-single-image">
                             <figure class="image-anime reveal">
-                                <img src="../../service/images/advance peel.webp" alt="">
+                                <img id="treatment-main-image" src="../../service/images/advance peel.webp" alt="">
                             </figure>
                         </div>
 
                         <!-- Service Entry Content Start -->
                         <div class="service-entry">
-                            <h2 class="text-anime-style-3">Advanced Facial Peeling Treatments</h2>                          
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">
+                            <!-- Title -->
+                            <h2 id="treatment-title" class="text-anime-style-3">Advanced Facial Peeling Treatments</h2>                          
+                            <!-- Description -->
+                            <p id="treatment-description" class="wow fadeInUp" data-wow-delay="0.2s">
                                 At MedZeal, our facial peeling treatments are designed to gently exfoliate your skin, remove dead cells, and reveal a radiant, youthful glow. Our specialized procedures are customized to meet your individual skin care needs.
                             </p>
                             <p class="wow fadeInUp" data-wow-delay="0.4s">
@@ -212,7 +210,8 @@
                             <p class="wow fadeInUp" data-wow-delay="0.6s">
                                 Experience the transformation as our treatments help to:
                             </p>
-                            <ul class="wow fadeInUp" data-wow-delay="0.8s">
+                            <!-- Benefits List -->
+                            <ul id="treatment-benefits" class="wow fadeInUp" data-wow-delay="0.8s">
                                 <li>Exfoliate and renew skin cells</li>
                                 <li>Improve skin texture and tone</li>
                                 <li>Reduce the appearance of fine lines and wrinkles</li>
@@ -220,47 +219,34 @@
                                 <li>Promote collagen production</li>
                             </ul>
 
-                            <!-- Service Entry Image Start -->
-                            <div class="service-entry-image">
+                            <!-- Additional Benefit Images -->
+                            <div class="benefit-images">
                                 <div class="row">
                                     <div class="col-md-6 col-6">
-                                        <!-- Service Entry Image Start -->
-                                        <div class="service-entry-img-1 wow fadeInUp" data-wow-delay="0.25s">
-                                            <figure class="image-anime reveal">
-                                                <img src="../../images/service-img-5.jpg" alt="">
-                                            </figure>
-                                        </div>
-                                        <!-- Service Entry Image End -->
+                                        <figure class="image-anime reveal">
+                                            <img id="treatment-sub-image-1" src="../../images/service-img-5.jpg" alt="">
+                                        </figure>
                                     </div>
-
                                     <div class="col-md-6 col-6">
-                                        <!-- Service Entry Image Start -->
-                                        <div class="service-entry-img-2 wow fadeInUp" data-wow-delay="0.5s">
-                                            <figure class="image-anime reveal">
-                                                <img src="../../images/service-img-5.jpg" alt="">
-                                            </figure>
-                                        </div>
-                                        <!-- Service Entry Image End -->
+                                        <figure class="image-anime reveal">
+                                            <img id="treatment-sub-image-2" src="../../images/service-img-5.jpg" alt="">
+                                        </figure>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Service Entry Image End -->
                         </div>
                         <!-- Service Entry Content End -->
 
-                        <!-- Our Faqs Section Start -->
+                        <!-- FAQ Section Start -->
                         <div class="about-faq-section our-faqs-section">
-                            <!-- Section Title Start -->
                             <div class="section-title">
                                 <h2 class="text-anime-style-3" data-cursor="-opaque">Got Questions about Facial Peeling?</h2>
                                 <p class="wow fadeInUp" data-wow-delay="0.25s">
                                     Our experts at MedZeal are here to help you understand our advanced facial treatments. Find answers to common questions below.
                                 </p>
                             </div>
-                            <!-- Section Title End -->
                             <!-- FAQ Accordion Start -->
                             <div class="faq-accordion" id="accordion">
-                                <!-- FAQ Item Start -->
                                 <div class="accordion-item wow fadeInUp">
                                     <h2 class="accordion-header" id="heading1">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
@@ -275,9 +261,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- FAQ Item End -->
-    
-                                <!-- FAQ Item Start -->
                                 <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
                                     <h2 class="accordion-header" id="heading2">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
@@ -292,9 +275,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- FAQ Item End -->
-    
-                                <!-- FAQ Item Start -->
                                 <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
                                     <h2 class="accordion-header" id="heading3">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
@@ -309,9 +289,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- FAQ Item End -->    
-    
-                                <!-- FAQ Item Start -->
                                 <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
                                     <h2 class="accordion-header" id="heading4">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
@@ -326,9 +303,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- FAQ Item End --> 
-                                 
-                                <!-- FAQ Item Start -->
                                 <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
                                     <h2 class="accordion-header" id="heading5">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
@@ -343,14 +317,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- FAQ Item End --> 
                             </div>
                             <!-- FAQ Accordion End -->
                         </div>
-                        <!-- Our Faqs Section End -->
+                        <!-- FAQ Section End -->
                     </div>
                     <!-- Service Single Content End -->
                 </div>
+                <!-- Main Content End -->
             </div>
         </div>
     </div>
@@ -365,30 +339,24 @@
                     <div class="about-footer">
                         <div class="row">
                             <div class="col-lg-4">
-                                <!-- Footer Logo Start -->
                                 <div class="footer-logo">
                                     <img src="images/footer-logo.svg" alt="">
-                                </div>
-                                <!-- Footer Logo End -->                        
+                                </div>                       
                             </div>
-
                             <div class="col-lg-8">
-                                <!-- About Footer Content Start -->
                                 <div class="about-footer-content">
                                     <h3>MedZeal - Your Trusted Partner in Facial Rejuvenation and Wellness</h3>
                                     <p>
                                         At MedZeal, we are dedicated to delivering exceptional care through advanced facial treatments that restore your skin’s natural glow and vitality.
                                     </p>
                                 </div>
-                                <!-- About Footer Content End -->
                             </div>
                         </div>                        
                      </div>
                     <!-- About Footer End -->
 
-                    <!-- About Footer List Start -->
+                    <!-- Footer Links Start -->
                     <div class="about-footer-list">
-                        <!-- Footer Quick Links Start -->
                         <div class="footer-links quick-links">
                             <h3>Quick Links</h3>
                             <ul>
@@ -397,9 +365,6 @@
                                 <li><a href="#">Contact Us</a></li>
                             </ul>
                         </div>
-                        <!-- Footer Quick Links End -->
-
-                        <!-- Footer Quick Links Start -->
                         <div class="footer-links service-links">
                             <h3>More Services</h3>
                             <ul>
@@ -409,9 +374,6 @@
                                 <li><a href="#">Vampire Facial</a></li>
                             </ul>
                         </div>
-                        <!-- Footer Quick Links End -->
-
-                        <!-- Footer Quick Links Start -->
                         <div class="footer-links social-links">
                             <h3>Social Media</h3>
                             <ul>
@@ -421,9 +383,6 @@
                                 <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>                                                                
                             </ul>
                         </div>
-                        <!-- Footer Quick Links End -->
-
-                        <!-- Footer Quick Links Start -->
                         <div class="footer-links working-links">
                             <h3>Working Hours</h3>
                             <ul>
@@ -432,13 +391,9 @@
                                 <li>Sun: Closed</li>
                             </ul>
                         </div>
-                        <!-- Footer Quick Links End -->
-
-                        <!-- Footer Contact Details Start -->
                         <div class="footer-links footer-contact-details">
                             <h3>Help and Support</h3>
                             <div class="footer-contact-box">
-                                <!-- Footer Info Box Start -->
                                 <div class="footer-info-box">
                                     <div class="icon-box">
                                         <img src="images/icon-phone.svg" alt="">
@@ -447,9 +402,6 @@
                                         <p>(+0) 789 3456 012</p>
                                     </div>                                
                                 </div>
-                                <!-- Footer Info Box End -->
-
-                                <!-- Footer Info Box Start -->
                                 <div class="footer-info-box">
                                     <div class="icon-box">
                                         <img src="images/icon-mail.svg" alt="">
@@ -458,26 +410,21 @@
                                         <p>domain@gmail.com</p>
                                     </div>
                                 </div>
-                                <!-- Footer Info Box End -->
                             </div>
                         </div>
-                        <!-- Footer Contact Details End -->
-
-                        <!-- Footer Copyright Section Start -->
-                         <div class="footer-links terms-condition-links">
+                        <div class="footer-links terms-condition-links">
                             <div class="footer-copyright-text">
                                 <p>Copyright 2024 MedZeal. All Rights Reserved.</p>
                             </div>
                             <div class="footer-terms-condition">
                                 <ul>
                                     <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Terms and Conditions</a></li>
+                                    <li><a href="">Terms and Conditions</a></li>
                                 </ul>
                             </div>
-                         </div>                        
-                        <!-- Footer Copyright Section End -->
+                        </div>                        
                     </div>
-                    <!-- About Footer List End -->
+                    <!-- Footer Links End -->
                 </div>                
             </div>
         </div>
@@ -517,5 +464,73 @@
     <script src="js/function.js"></script>
     <script src="js/theme-panel.js"></script>
 
+    <!-- Custom Script for Changing Facial Treatment Content -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const treatments = {
+            "Medzeal Facial": {
+                title: "Medzeal Facial",
+                description: "The Medzeal Facial is a rejuvenating treatment that deeply cleanses and revitalizes your skin using a unique blend of natural extracts to boost radiance.",
+                benefits: ["Deep cleansing", "Skin rejuvenation", "Improved radiance", "Hydration boost"],
+                image: "../../images/medzeal-facial.jpg",
+                subImage1: "../../images/medzeal-facial-sub1.jpg",
+                subImage2: "../../images/medzeal-facial-sub2.jpg"
+            },
+            "Exoluxe Facial": {
+                title: "Exoluxe Facial",
+                description: "Exoluxe Facial is an advanced peeling treatment that enhances skin texture and tone. It utilizes potent antioxidants to restore youthful vibrancy.",
+                benefits: ["Enhanced texture", "Even skin tone", "Antioxidant-rich", "Revitalizing"],
+                image: "../../images/exoluxe-facial.jpg",
+                subImage1: "../../images/exoluxe-facial-sub1.jpg",
+                subImage2: "../../images/exoluxe-facial-sub2.jpg"
+            },
+            "Snail Medifacial": {
+                title: "Snail Medifacial",
+                description: "Snail Medifacial harnesses the regenerative properties of snail secretion filtrate to deeply repair and rejuvenate your skin, promoting a smoother complexion.",
+                benefits: ["Skin repair", "Natural regeneration", "Smoother complexion", "Hydration"],
+                image: "../../images/snail-facial.avif",
+                subImage1: "../../images/snail-facial-sub1.avif",
+                subImage2: "../../images/snail-facial-sub2.avif"
+            },
+            "Vampire Facial": {
+                title: "Vampire Facial",
+                description: "Vampire Facial uses advanced PRP (Platelet-Rich Plasma) technology to stimulate collagen production and improve skin elasticity for a vibrant, youthful look.",
+                benefits: ["Stimulates collagen", "Improves elasticity", "Youthful skin", "Innovative treatment"],
+                image: "../../images/vampire-facial.webp",
+                subImage1: "../../images/vampire-facial-sub1.webp",
+                subImage2: "../../images/vampire-facial-sub2.webp"
+            }
+        };
+
+        const links = document.querySelectorAll(".facial-treatment-link");
+        links.forEach(link => {
+            link.addEventListener("click", function(e) {
+                e.preventDefault();
+                const treatmentName = this.textContent.trim();
+                const data = treatments[treatmentName];
+                if (data) {
+                    // Update title and description
+                    document.getElementById("treatment-title").textContent = data.title;
+                    document.getElementById("treatment-description").textContent = data.description;
+                    // Update benefits list
+                    const benefitsList = document.getElementById("treatment-benefits");
+                    benefitsList.innerHTML = "";
+                    data.benefits.forEach(benefit => {
+                        const li = document.createElement("li");
+                        li.textContent = benefit;
+                        benefitsList.appendChild(li);
+                    });
+                    // Update main image and additional images
+                    document.getElementById("treatment-main-image").src = data.image;
+                    document.getElementById("treatment-image-1").src = data.image;
+                    document.getElementById("treatment-image-2").src = data.image;
+                    // Update sub benefit images
+                    document.getElementById("treatment-sub-image-1").src = data.subImage1;
+                    document.getElementById("treatment-sub-image-2").src = data.subImage2;
+                }
+            });
+        });
+    });
+    </script>
 </body>
 </html>
