@@ -36,7 +36,6 @@
 <body>
 
     <!-- Preloader Start -->
-
 	<!-- Preloader End -->
 
     <!-- Topbar Section Start -->
@@ -89,22 +88,10 @@
 					<div class="collapse navbar-collapse main-menu">
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item "><a class="nav-link" href="/">Home</a>
-                                    
-                                </li>                                
-                                <li class="nav-item "><a class="nav-link" href="/appoinment/">Appointment</a>
+                                <li class="nav-item "><a class="nav-link" href="/">Home</a></li>                                
+                                <li class="nav-item "><a class="nav-link" href="/appoinment/">Appointment</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/about/">About Us</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/service">Services</a></li>
-                                <!-- <li class="nav-item submenu"><a class="nav-link" href="./">Services</a>
-                                    <ul class="sub-menu">
-                                        <li class="nav-item"><a class="nav-link" href="service/hijama/">hijama Therapy</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="index-video.html">Home - Video</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="index-slider.html">Home - Slider</a></li>
-                                    </ul>
-                                    
-                                                                                                  
-                                  
-                                </li> -->
                             </ul>
                         </div>
                         <!-- Let’s Start Button Start -->
@@ -174,7 +161,7 @@
                                     <input type="text" name="phone" class="form-control" id="phone" placeholder="Enter 10-digit Phone Number" required pattern="\d{10}" title="Please enter a 10-digit phone number">
                                     <div class="help-block with-errors"></div>
                                 </div>
-                                <!-- Services Dropdown -->
+                                <!-- Services Dropdown (Including Package Booking) -->
                                 <div class="form-group col-md-6 mb-4">
                                     <select name="services" class="form-control form-select" id="services" required>
                                         <option value="" disabled selected>Select Service</option>
@@ -200,6 +187,15 @@
                                             <option value="Hijama Therapy">Hijama Therapy</option>
                                             <option value="Chiropractic Services">Chiropractic Services</option>
                                             <option value="Dermatologist">Dermatologist</option>
+                                        </optgroup>
+                                        <optgroup label="Packages">
+                                            <option value="Essential Glow Packages">Essential Glow Packages</option>
+                                            <option value="Acne &amp; Scar Solutions">Acne &amp; Scar Solutions</option>
+                                            <option value="Brightening &amp; Pigmentation">Brightening &amp; Pigmentation</option>
+                                            <option value="Bridal Glow Packages">Bridal Glow Packages</option>
+                                            <option value="Anti-Aging Programs">Anti-Aging Programs</option>
+                                            <option value="Specialized Treatments">Specialized Treatments</option>
+                                            <option value="VIP Plans">VIP Plans</option>
                                         </optgroup>
                                         <option value="Other">Other</option>
                                     </select>
@@ -334,7 +330,7 @@
                             <div class="col-lg-4">
                                 <!-- Footer Logo Start -->
                                 <div class="footer-logo">
-                                    <img src="images/footer-logo.svg" alt="">
+                                    <img src="images/logobg.png" alt="">
                                 </div>
                                 <!-- Footer Logo End -->                        
                             </div>
@@ -342,8 +338,8 @@
                             <div class="col-lg-8">
                                 <!-- About Footer Content Start -->
                                 <div class="about-footer-content">
-                                    <h3>#1 Physiotherapy centre in the town</h3>
-                                    <p>We understand that injuries and acute pain can happen unexpectedly. Our emergency physiotherapy We understand that injuries and acute pain can happen.</p>
+                                    <h3>Best Physiotherapy & Dermatology centre in the Thane</h3>
+                                    <p>We understand that injuries and acute pain can happen unexpectedly. Our emergency physiotherapy & dermatology We understand that injuries and acute pain can happen.</p>
                                 </div>
                                 <!-- About Footer Content End -->
                             </div>
@@ -357,9 +353,9 @@
                         <div class="footer-links quick-links">
                             <h3>quick links</h3>
                             <ul>
-                                <li><a href="#">about us</a></li>
-                                <li><a href="#">services</a></li>
-                                <li><a href="#">contact us</a></li>
+                                <li><a href="../about/">about us</a></li>
+                                <li><a href="../service/">services</a></li>
+                                <li><a href="../appoinment/">Appointment</a></li>
                             </ul>
                         </div>
                         <!-- Footer Quick Links End -->
@@ -408,7 +404,7 @@
                                         <img src="images/icon-phone.svg" alt="">
                                     </div>
                                     <div class="footer-info-box-content">
-                                        <p>(+0) 789 3456 012</p>
+                                        <p>+91 7044178786</p>
                                     </div>                                
                                 </div>
                                 <!-- Footer Info Box End -->
@@ -419,7 +415,7 @@
                                         <img src="images/icon-mail.svg" alt="">
                                     </div>
                                     <div class="footer-info-box-content">
-                                        <p>domain@gmail.com</p>
+                                        <p>medzealpcw@gmail.com</p>
                                     </div>
                                 </div>
                                 <!-- Footer Info Box End -->
@@ -428,7 +424,7 @@
                         <!-- Footer Contact Details End -->
 
                         <!-- Footer Copyright Section Start -->
-                         <div class="footer-links terms-condition-links">
+                        <div class="footer-links terms-condition-links">
                             <div class="footer-copyright-text">
                                 <p>Copyright 2024 Physiotherapy. All Rights Reserved.</p>
                             </div>
@@ -438,7 +434,7 @@
                                     <li><a href="#">terms and conditions</a></li>
                                 </ul>
                             </div>
-                         </div>                        
+                        </div>                        
                         <!-- Footer Copyright Section End -->
                     </div>
                     <!-- About Footer List End -->
@@ -481,6 +477,46 @@
     <script src="js/function.js"></script>
 	<script src="js/theme-panel.js"></script>
     
+    <!-- Auto-Select Dropdown from URL -->
+    <script>
+      window.addEventListener("DOMContentLoaded", function() {
+        const params = new URLSearchParams(window.location.search);
+
+        // Look for 'test' or 'package' (whichever exists)
+        const testParamValue = params.get('test');
+        const packageParamValue = params.get('package');
+        const paramValue = testParamValue || packageParamValue;
+
+        // If found, attempt to auto-select it in the dropdown
+        if(paramValue) {
+          const servicesDropdown = document.getElementById('services');
+          
+          // Loop through all options to find a case-insensitive match
+          for (let i = 0; i < servicesDropdown.options.length; i++) {
+            if (servicesDropdown.options[i].value.toLowerCase() === paramValue.toLowerCase()) {
+              servicesDropdown.selectedIndex = i;
+              
+              // If param is "Other", display the Other Service field
+              if (paramValue.toLowerCase() === 'other') {
+                document.getElementById("otherServiceContainer").style.display = "block";
+              }
+              break;
+            }
+          }
+        }
+
+        // Show/hide "Other" text field on manual dropdown change
+        const servicesDropdown = document.getElementById('services');
+        servicesDropdown.addEventListener("change", function() {
+          if (this.value === "Other") {
+            document.getElementById("otherServiceContainer").style.display = "block";
+          } else {
+            document.getElementById("otherServiceContainer").style.display = "none";
+          }
+        });
+      });
+    </script>
+
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
@@ -549,6 +585,7 @@
                   alert("Appointment booked successfully!");
                   // Reset the form
                   document.getElementById("appointmentForm").reset();
+                  document.getElementById("otherServiceContainer").style.display = "none";
               }
           });
       });

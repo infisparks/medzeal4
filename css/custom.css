@@ -1144,7 +1144,7 @@ header.main-header .header-sticky.active{
 	background-color: transparent;
 }
 
-.about-circle-logo::before{
+/* .about-circle-logo::before{
     content: '';
     display: block;
     position: absolute;
@@ -1160,15 +1160,15 @@ header.main-header .header-sticky.active{
 
 .about-us-images:hover .about-circle-logo::before{
 	transform: scale(1.1);
-}
+} */
 
 .about-us-images .about-circle-logo img{
 	max-width: 85px;
-	transition: all 0.4s ease-in-out;
+	/* transition: all 0.4s ease-in-out; */
 }
 
 .about-us-images:hover .about-circle-logo img{
-	filter: brightness(0) invert(1);
+	/* filter: brightness(0) invert(1); */
 }
 
 /************************************/
