@@ -32,6 +32,7 @@
 	<link rel="stylesheet" href="css/mousecursor.css">
 	<!-- Main Custom Css -->
 	<link href="css/custom.css" rel="stylesheet" media="screen">
+
     <!-- Inline Style Override: Primary Theme Color -->
     <style>
       /* Set primary color variable */
@@ -56,6 +57,7 @@
       a:hover {
           color: #125A8B;
       }
+
       /* Packages Slider Styles */
       .packages-container {
           display: flex;
@@ -144,6 +146,62 @@
           cursor: pointer;
           pointer-events: all;
       }
+
+      /* Popup Styles */
+      .popup-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: var(--theme-color);
+        color: #fff;
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        z-index: 9999;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 14px;
+        animation: fadeInUp 0.5s ease-in-out;
+      }
+      .popup-message {
+        margin: 0;
+        line-height: 1.4;
+      }
+      .popup-btn {
+        background: #fff;
+        color: var(--theme-color);
+        border-radius: 4px;
+        text-decoration: none;
+        text-align: center;
+        padding: 6px 10px;
+        font-weight: 600;
+      }
+      .popup-btn:hover {
+        background: #f1f1f1;
+      }
+
+      /* Simple keyframe for entry animation */
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 576px) {
+        .popup-container {
+          right: 10px;
+          left: 10px;
+          max-width: unset;
+          font-size: 13px;
+        }
+      }
     </style>
 </head>
 <body>
@@ -179,9 +237,7 @@
                     <div class="topbar-social-links">
                         <ul>
                             <li><a href="https://www.facebook.com/globalmedia.live/videos/medzeal-physiotherapy-wellness-center-revolutionizing-healthcare-in-mumbra-with-/8844278072321700/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                         
                             <li><a href="https://www.instagram.com/md.faridalizariwala/reel/DCER9IPMXsc/"><i class="fa-brands fa-instagram"></i></a></li>
-                          
                         </ul>
                     </div>
                     <!-- Topbar Social Links End -->
@@ -329,10 +385,6 @@
                         </div>
                         <!-- Section Title End -->
 
-                        <!-- About Content Body Start -->
-                        
-                        <!-- About Content Body End -->
-
                         <!-- About Content Footer Start -->
                         <div class="about-content-footer wow fadeInUp" data-wow-delay="1.25s">
                             <a href="/appoinment/" class="btn-default"><span>book appointment</span></a>
@@ -409,32 +461,18 @@
                             </figure>
                         </div>
                         <!-- Service Item Image End -->
-
-                        <!-- Service Item Icon Start -->
-                        
-                        <!-- Service Item Icon ENd -->
-
-                        <!-- Service Body Start -->
                         <div class="service-body">
-                            <!-- Service Content Start -->
                             <div class="service-content">
                                 <h3>IV Drips</h3>
-                                <p>*Glutathione *NAD+ Anti-aging *Hydration Drip *Myers
-                                    cocktail IV therapy</p>
+                                <p>*Glutathione *NAD+ Anti-aging *Hydration Drip *Myers cocktail IV therapy</p>
                             </div>
-                            <!-- Service Content End -->
-
-                             <!-- Service Btn Start -->
                             <div class="service-btn">
                                 <a href="service/vidrip/"><img src="images/arrow-readmore-btn.svg" alt=""></a>
                             </div>
-                            <!-- Service Btn End -->
                         </div>
-                        <!-- Service Body End -->
                     </div>
                     <!-- Service Item End -->
                 </div>
-                
 
                 <div class="col-lg-4 col-md-6">
                     <!-- Service Item Start -->
@@ -446,30 +484,19 @@
                             </figure>
                         </div>
                         <!-- Service Item Image End -->
-
-                        <!-- Service Item Icon Start -->
-                        
-                        <!-- Service Item Icon ENd -->
-
-                        <!-- Service Body Start -->
                         <div class="service-body">
-                            <!-- Service Content Start -->
                             <div class="service-content">
                                 <h3>Hijama Therapy</h3>
                                 <p>ancient healing practice where cups are applied to the skin to create suction.</p>
                             </div>
-                            <!-- Service Content End -->
-
-                             <!-- Service Btn Start -->
                             <div class="service-btn">
                                 <a href="/service/hijama/"><img src="images/arrow-readmore-btn.svg" alt=""></a>
                             </div>
-                            <!-- Service Btn End -->
                         </div>
-                        <!-- Service Body End -->
                     </div>
                     <!-- Service Item End -->
                 </div>
+
                 <div class="col-lg-4 col-md-6">
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp" data-wow-delay="0.5s">
@@ -480,27 +507,15 @@
                             </figure>
                         </div>
                         <!-- Service Item Image End -->
-
-                        <!-- Service Item Icon Start -->
-                        
-                        <!-- Service Item Icon ENd -->
-
-                        <!-- Service Body Start -->
                         <div class="service-body">
-                            <!-- Service Content Start -->
                             <div class="service-content">
                                 <h3>Speech Therapy</h3>
                                 <p>improves communication and swallowing disorders through targeted exercises.</p>
                             </div>
-                            <!-- Service Content End -->
-
-                             <!-- Service Btn Start -->
                             <div class="service-btn">
                                 <a href="service/Speech/"><img src="images/arrow-readmore-btn.svg" alt=""></a>
                             </div>
-                            <!-- Service Btn End -->
                         </div>
-                        <!-- Service Body End -->
                     </div>
                     <!-- Service Item End -->
                 </div>
@@ -508,70 +523,41 @@
                 <div class="col-lg-4 col-md-6">
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp" data-wow-delay="0.75s">
-                        <!-- Service Item Image Start -->
                         <div class="service-item-image">
                             <figure>
                                 <img src="service/images/Post Physiotherapy.webp" alt="">
                             </figure>
                         </div>
-                        <!-- Service Item Image End -->
-
-                        <!-- Service Item Icon Start -->
-                        
-                        <!-- Service Item Icon ENd -->
-
-                        <!-- Service Body Start -->
                         <div class="service-body">
-                            <!-- Service Content Start -->
                             <div class="service-content">
                                 <h3>Post-op physiotherapy</h3>
                                 <p>post-op physiotherapy aids recovery after surgery by reducing pain, restoring mobility, and strengthening muscles.</p>
                             </div>
-                            <!-- Service Content End -->
-
-                             <!-- Service Btn Start -->
                             <div class="service-btn">
                                 <a href="service/Post-op/"><img src="images/arrow-readmore-btn.svg" alt=""></a>
                             </div>
-                            <!-- Service Btn End -->
                         </div>
-                        <!-- Service Body End -->
                     </div>
                     <!-- Service Item End -->
                 </div>
-                
+
                 <div class="col-lg-4 col-md-6">
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp" data-wow-delay="0.5s">
-                        <!-- Service Item Image Start -->
                         <div class="service-item-image">
                             <figure>
                                 <img src="service/geriatric/images/new geriatric.jpeg" alt="">
                             </figure>
                         </div>
-                        <!-- Service Item Image End -->
-
-                        <!-- Service Item Icon Start -->
-                        
-                        <!-- Service Item Icon ENd -->
-
-                        <!-- Service Body Start -->
                         <div class="service-body">
-                            <!-- Service Content Start -->
                             <div class="service-content">
                                 <h3>Geriatric Physiotherapy</h3>
-                                <p>enhances mobility, strength, and independence in elderly individuals, addressing age-related conditions.
-                                </p>
+                                <p>enhances mobility, strength, and independence in elderly individuals, addressing age-related conditions.</p>
                             </div>
-                            <!-- Service Content End -->
-
-                             <!-- Service Btn Start -->
                             <div class="service-btn">
                                 <a href="service/geriatric/"><img src="images/arrow-readmore-btn.svg" alt=""></a>
                             </div>
-                            <!-- Service Btn End -->
                         </div>
-                        <!-- Service Body End -->
                     </div>
                     <!-- Service Item End -->
                 </div>
@@ -579,41 +565,26 @@
                 <div class="col-lg-4 col-md-6">
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp" data-wow-delay="0.75s">
-                        <!-- Service Item Image Start -->
                         <div class="service-item-image">
                             <figure>
                                 <img src="service/images/Maternal Physiotherapy.png" alt="">
                             </figure>
                         </div>
-                        <!-- Service Item Image End -->
-
-                        <!-- Service Item Icon Start -->
-                        
-                        <!-- Service Item Icon ENd -->
-
-                        <!-- Service Body Start -->
                         <div class="service-body">
-                            <!-- Service Content Start -->
                             <div class="service-content">
                                 <h3>Maternal Physiotherapy</h3>
                                 <p>supports women during pregnancy and postpartum by relieving pain and improving mobility</p>
                             </div>
-                            <!-- Service Content End -->
-
-                             <!-- Service Btn Start -->
                             <div class="service-btn">
                                 <a href="service/Maternal/"><img src="images/arrow-readmore-btn.svg" alt=""></a>
                             </div>
-                            <!-- Service Btn End -->
                         </div>
-                        <!-- Service Body End -->
                     </div>
                     <!-- Service Item End -->
                 </div>
-                
-                    <!-- Service Item End -->
-                </div>
+            </div>
 
+            <div class="row">
                 <div class="col-lg-12">
                     <!-- More Service Btn Start -->
                     <div class="more-service-btn wow fadeInUp" data-wow-delay="1.5s">
@@ -628,264 +599,263 @@
     <!-- Our Services Section End -->
 
     <!-- Gallery Section Start -->
-  <div class="gallery-section bg-radius-section " style="margin-top: 30px;  margin-bottom: 70px;">
-    <div class="container">
-      <!-- Section Title -->
-      <div class="section-title">
-        <h3 class="wow fadeInUp">Our Gallery</h3>
-        <h2 class="text-anime-style-3" data-cursor="-opaque">Explore Our Center</h2>
-      </div>
-      <!-- Section Title End -->
+    <div class="gallery-section bg-radius-section " style="margin-top: 30px;  margin-bottom: 70px;">
+      <div class="container">
+        <!-- Section Title -->
+        <div class="section-title">
+          <h3 class="wow fadeInUp">Our Gallery</h3>
+          <h2 class="text-anime-style-3" data-cursor="-opaque">Explore Our Center</h2>
+        </div>
+        <!-- Section Title End -->
 
-      <div class="row">
-        <!-- Gallery Item 1 -->
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0s">
-          <div class="gallery-item">
-            <figure class="image-anime reveal">
-              <img src="./service/Gallery/2.png" alt="Gallery Image 1">
-            </figure>
+        <div class="row">
+          <!-- Gallery Item 1 -->
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0s">
+            <div class="gallery-item">
+              <figure class="image-anime reveal">
+                <img src="./service/Gallery/2.png" alt="Gallery Image 1">
+              </figure>
+            </div>
           </div>
-        </div>
-        <!-- Gallery Item 2 -->
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="gallery-item">
-            <figure class="image-anime reveal">
-              <img src="./service/Gallery/3.png" alt="Gallery Image 2">
-            </figure>
+          <!-- Gallery Item 2 -->
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="gallery-item">
+              <figure class="image-anime reveal">
+                <img src="./service/Gallery/3.png" alt="Gallery Image 2">
+              </figure>
+            </div>
           </div>
-        </div>
-        <!-- Gallery Item 3 -->
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-          <div class="gallery-item">
-            <figure class="image-anime reveal">
-              <img src="./service/Gallery/4.png" alt="Gallery Image 3">
-            </figure>
+          <!-- Gallery Item 3 -->
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="gallery-item">
+              <figure class="image-anime reveal">
+                <img src="./service/Gallery/4.png" alt="Gallery Image 3">
+              </figure>
+            </div>
           </div>
-        </div>
-        <!-- Gallery Item 4 -->
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-          <div class="gallery-item">
-            <figure class="image-anime reveal">
-              <img src="./service/Gallery/5.png" alt="Gallery Image 4">
-            </figure>
+          <!-- Gallery Item 4 -->
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="gallery-item">
+              <figure class="image-anime reveal">
+                <img src="./service/Gallery/5.png" alt="Gallery Image 4">
+              </figure>
+            </div>
           </div>
-        </div>
-        <!-- Gallery Item 5 -->
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-          <div class="gallery-item">
-            <figure class="image-anime reveal">
-              <img src="./service/Gallery/6.png" alt="Gallery Image 5">
-            </figure>
+          <!-- Gallery Item 5 -->
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="gallery-item">
+              <figure class="image-anime reveal">
+                <img src="./service/Gallery/6.png" alt="Gallery Image 5">
+              </figure>
+            </div>
           </div>
-        </div>
-        <!-- Gallery Item 6 -->
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-          <div class="gallery-item">
-            <figure class="image-anime reveal">
-              <img src="./service/Gallery/7.png" alt="Gallery Image 6">
-            </figure>
+          <!-- Gallery Item 6 -->
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="gallery-item">
+              <figure class="image-anime reveal">
+                <img src="./service/Gallery/7.png" alt="Gallery Image 6">
+              </figure>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Gallery Section End -->
+    <!-- Gallery Section End -->
 
-  <!-- Our Packages Section Start -->
-  <div class="our-pricing bg-radius-section parallaxie">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5">
-          <div class="our-pricing-content">
-            <!-- Section Title Start -->
-            <div class="section-title">
-              <h3 class="wow fadeInUp">treatment packages</h3>
-              <h2 class="text-anime-style-3" data-cursor="-opaque">Skin Care Packages</h2>
-              <p class="wow fadeInUp" data-wow-delay="0.25s">
-                Discover our curated skin treatment packages designed to address various concerns and enhance your natural beauty. Experience personalized care with our advanced therapies.
-              </p>
-            </div>
-            <!-- Section Title End -->
+    <!-- Our Packages Section Start -->
+    <div class="our-pricing bg-radius-section parallaxie">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="our-pricing-content">
+              <!-- Section Title Start -->
+              <div class="section-title">
+                <h3 class="wow fadeInUp">treatment packages</h3>
+                <h2 class="text-anime-style-3" data-cursor="-opaque">Skin Care Packages</h2>
+                <p class="wow fadeInUp" data-wow-delay="0.25s">
+                  Discover our curated skin treatment packages designed to address various concerns and enhance your natural beauty. Experience personalized care with our advanced therapies.
+                </p>
+              </div>
+              <!-- Section Title End -->
 
-            <!-- Section Btn Start -->
-            <div class="section-btn wow fadeInUp" data-wow-delay="0.5s">
-              <a href="/appoinment/" class="btn-default"><span>Book Consultation</span></a>
+              <!-- Section Btn Start -->
+              <div class="section-btn wow fadeInUp" data-wow-delay="0.5s">
+                <a href="/appoinment/" class="btn-default"><span>Book Consultation</span></a>
+              </div>
+              <!-- Section Btn End -->
             </div>
-            <!-- Section Btn End -->
           </div>
-        </div>
 
-        <div class="col-lg-7">
-          <div class="slider-wrapper">
-            <!-- Navigation Arrows -->
-            <div class="slider-nav">
-              <button id="prevBtn">&#10094;</button>
-              <button id="nextBtn">&#10095;</button>
-            </div>
-            <div class="packages-container" id="packagesContainer">
-              <!-- Package Item: Essential Glow Packages -->
-              <div class="package-item highlighted-box">
-                <div>
-                  <div class="pricing-header">
-                    <h3>Essential Glow Packages</h3>
-                  </div>
-                  <div class="pricing-body">
-                    <ul class="treatment-list">
-                      <li><strong>Radiance Boost Package</strong> - Deep cleansing facial, hydrating mask, mild exfoliation</li>
-                      <li><strong>Revital Glow Therapy</strong> - Express medi-facial, vitamin C infusion, gentle peeling</li>
-                      <li><strong>Pure Skin Detox Plan</strong> - Charcoal detox, blackhead extraction, calming mask</li>
-                    </ul>
-                  </div>
-                </div>
-                <a href="https://medzeal.in/appoinment/index.html?package=Essential%20Glow%20Packages"
-                   class="btn-package">
-                  Book Package
-                </a>
+          <div class="col-lg-7">
+            <div class="slider-wrapper">
+              <!-- Navigation Arrows -->
+              <div class="slider-nav">
+                <button id="prevBtn">&#10094;</button>
+                <button id="nextBtn">&#10095;</button>
               </div>
+              <div class="packages-container" id="packagesContainer">
+                <!-- Package Item: Essential Glow Packages -->
+                <div class="package-item highlighted-box">
+                  <div>
+                    <div class="pricing-header">
+                      <h3>Essential Glow Packages</h3>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="treatment-list">
+                        <li><strong>Radiance Boost Package</strong> - Deep cleansing facial, hydrating mask, mild exfoliation</li>
+                        <li><strong>Revital Glow Therapy</strong> - Express medi-facial, vitamin C infusion, gentle peeling</li>
+                        <li><strong>Pure Skin Detox Plan</strong> - Charcoal detox, blackhead extraction, calming mask</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="https://medzeal.in/appoinment/index.html?package=Essential%20Glow%20Packages"
+                    class="btn-package">
+                    Book Package
+                  </a>
+                </div>
 
-              <!-- Package Item: Acne & Scar Solutions -->
-              <div class="package-item highlighted-box">
-                <div>
-                  <div class="pricing-header">
-                    <h3>Acne &amp; Scar Solutions</h3>
+                <!-- Package Item: Acne & Scar Solutions -->
+                <div class="package-item highlighted-box">
+                  <div>
+                    <div class="pricing-header">
+                      <h3>Acne &amp; Scar Solutions</h3>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="treatment-list">
+                        <li><strong>Flawless Acne Rescue</strong> - Acne-control peels, LED therapy, sebum regulation</li>
+                        <li><strong>Scar Erase Therapy</strong> - Microneedling with PRP, laser resurfacing</li>
+                        <li><strong>Pore Refining Solution</strong> - Hydrafacial, pore-tightening treatment</li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="pricing-body">
-                    <ul class="treatment-list">
-                      <li><strong>Flawless Acne Rescue</strong> - Acne-control peels, LED therapy, sebum regulation</li>
-                      <li><strong>Scar Erase Therapy</strong> - Microneedling with PRP, laser resurfacing</li>
-                      <li><strong>Pore Refining Solution</strong> - Hydrafacial, pore-tightening treatment</li>
-                    </ul>
-                  </div>
+                  <a href="https://medzeal.in/appoinment/index.html?package=Acne%20%26%20Scar%20Solutions"
+                    class="btn-package">
+                    Book Package
+                  </a>
                 </div>
-                <a href="https://medzeal.in/appoinment/index.html?package=Acne%20%26%20Scar%20Solutions"
-                   class="btn-package">
-                  Book Package
-                </a>
-              </div>
 
-              <!-- Package Item: Brightening & Pigmentation -->
-              <div class="package-item highlighted-box">
-                <div>
-                  <div class="pricing-header">
-                    <h3>Brightening &amp; Pigmentation</h3>
+                <!-- Package Item: Brightening & Pigmentation -->
+                <div class="package-item highlighted-box">
+                  <div>
+                    <div class="pricing-header">
+                      <h3>Brightening &amp; Pigmentation</h3>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="treatment-list">
+                        <li><strong>Illuminance Revive Plan</strong> - Laser toning, vitamin C infusion</li>
+                        <li><strong>Luminous Complexion</strong> - Glutathione IV, melanin-reducing peels</li>
+                        <li><strong>Tan Removal Therapy</strong> - Full-body peels, sun-damage repair</li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="pricing-body">
-                    <ul class="treatment-list">
-                      <li><strong>Illuminance Revive Plan</strong> - Laser toning, vitamin C infusion</li>
-                      <li><strong>Luminous Complexion</strong> - Glutathione IV, melanin-reducing peels</li>
-                      <li><strong>Tan Removal Therapy</strong> - Full-body peels, sun-damage repair</li>
-                    </ul>
-                  </div>
+                  <a href="https://medzeal.in/appoinment/index.html?package=Brightening%20%26%20Pigmentation"
+                    class="btn-package">
+                    Book Package
+                  </a>
                 </div>
-                <a href="https://medzeal.in/appoinment/index.html?package=Brightening%20%26%20Pigmentation"
-                   class="btn-package">
-                  Book Package
-                </a>
-              </div>
 
-              <!-- Package Item: Bridal Glow Packages -->
-              <div class="package-item highlighted-box">
-                <div>
-                  <div class="pricing-header">
-                    <h3>Bridal Glow Packages</h3>
+                <!-- Package Item: Bridal Glow Packages -->
+                <div class="package-item highlighted-box">
+                  <div>
+                    <div class="pricing-header">
+                      <h3>Bridal Glow Packages</h3>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="treatment-list">
+                        <li><strong>Dulhan Radiance Plan</strong> - Hydrafacials, PRP therapy, IV hydration</li>
+                        <li><strong>Golden Bridal Elegance</strong> - Skin boosters, Botox, microneedling RF</li>
+                        <li><strong>Grooming Package</strong> - Laser toning, vitamin therapy</li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="pricing-body">
-                    <ul class="treatment-list">
-                      <li><strong>Dulhan Radiance Plan</strong> - Hydrafacials, PRP therapy, IV hydration</li>
-                      <li><strong>Golden Bridal Elegance</strong> - Skin boosters, Botox, microneedling RF</li>
-                      <li><strong>Grooming Package</strong> - Laser toning, vitamin therapy</li>
-                    </ul>
-                  </div>
+                  <a href="https://medzeal.in/appoinment/index.html?package=Bridal%20Glow%20Packages"
+                    class="btn-package">
+                    Book Package
+                  </a>
                 </div>
-                <a href="https://medzeal.in/appoinment/index.html?package=Bridal%20Glow%20Packages"
-                   class="btn-package">
-                  Book Package
-                </a>
-              </div>
 
-              <!-- Package Item: Anti-Aging Programs -->
-              <div class="package-item highlighted-box">
-                <div>
-                  <div class="pricing-header">
-                    <h3>Anti-Aging Programs</h3>
+                <!-- Package Item: Anti-Aging Programs -->
+                <div class="package-item highlighted-box">
+                  <div>
+                    <div class="pricing-header">
+                      <h3>Anti-Aging Programs</h3>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="treatment-list">
+                        <li><strong>Timeless Youth Program</strong> - PRP therapy, collagen microneedling</li>
+                        <li><strong>Age Reverse Therapy</strong> - HIFU, Botox, radiofrequency</li>
+                        <li><strong>Firm &amp; Lift Renewal</strong> - Ultherapy, CO2 laser</li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="pricing-body">
-                    <ul class="treatment-list">
-                      <li><strong>Timeless Youth Program</strong> - PRP therapy, collagen microneedling</li>
-                      <li><strong>Age Reverse Therapy</strong> - HIFU, Botox, radiofrequency</li>
-                      <li><strong>Firm &amp; Lift Renewal</strong> - Ultherapy, CO2 laser</li>
-                    </ul>
-                  </div>
+                  <a href="https://medzeal.in/appoinment/index.html?package=Anti-Aging%20Programs"
+                    class="btn-package">
+                    Book Package
+                  </a>
                 </div>
-                <a href="https://medzeal.in/appoinment/index.html?package=Anti-Aging%20Programs"
-                   class="btn-package">
-                  Book Package
-                </a>
-              </div>
 
-              <!-- Package Item: Specialized Treatments -->
-              <div class="package-item highlighted-box">
-                <div>
-                  <div class="pricing-header">
-                    <h3>Specialized Treatments</h3>
+                <!-- Package Item: Specialized Treatments -->
+                <div class="package-item highlighted-box">
+                  <div>
+                    <div class="pricing-header">
+                      <h3>Specialized Treatments</h3>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="treatment-list">
+                        <li><strong>Peel Perfection Program</strong> - Glow peel, pigmentation correction</li>
+                        <li><strong>Medi-Facial Luxe</strong> - Oxygen infusion, vitamin C mesotherapy</li>
+                        <li><strong>Laser Radiance Plan</strong> - Q-switch toning, CO2 resurfacing</li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="pricing-body">
-                    <ul class="treatment-list">
-                      <li><strong>Peel Perfection Program</strong> - Glow peel, pigmentation correction</li>
-                      <li><strong>Medi-Facial Luxe</strong> - Oxygen infusion, vitamin C mesotherapy</li>
-                      <li><strong>Laser Radiance Plan</strong> - Q-switch toning, CO2 resurfacing</li>
-                    </ul>
-                  </div>
+                  <a href="https://medzeal.in/appoinment/index.html?package=Specialized%20Treatments"
+                    class="btn-package">
+                    Book Package
+                  </a>
                 </div>
-                <a href="https://medzeal.in/appoinment/index.html?package=Specialized%20Treatments"
-                   class="btn-package">
-                  Book Package
-                </a>
-              </div>
 
-              <!-- Package Item: VIP Plans -->
-              <div class="package-item highlighted-box">
-                <div>
-                  <div class="pricing-header">
-                    <h3>VIP Plans</h3>
+                <!-- Package Item: VIP Plans -->
+                <div class="package-item highlighted-box">
+                  <div>
+                    <div class="pricing-header">
+                      <h3>VIP Plans</h3>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="treatment-list">
+                        <li><strong>Elite Glow Subscription</strong> - Monthly treatments, priority access</li>
+                        <li><strong>Celebrity Transformation</strong> - PRP, laser resurfacing, Ultherapy</li>
+                        <li><strong>Signature Luxe Plan</strong> - Tailored skincare, premium treatments</li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="pricing-body">
-                    <ul class="treatment-list">
-                      <li><strong>Elite Glow Subscription</strong> - Monthly treatments, priority access</li>
-                      <li><strong>Celebrity Transformation</strong> - PRP, laser resurfacing, Ultherapy</li>
-                      <li><strong>Signature Luxe Plan</strong> - Tailored skincare, premium treatments</li>
-                    </ul>
-                  </div>
+                  <a href="https://medzeal.in/appoinment/index.html?package=VIP%20Plans"
+                    class="btn-package">
+                    Book Package
+                  </a>
                 </div>
-                <a href="https://medzeal.in/appoinment/index.html?package=VIP%20Plans"
-                   class="btn-package">
-                  Book Package
-                </a>
-              </div>
-            </div><!-- End .packages-container -->
-          </div><!-- End .slider-wrapper -->
-        </div><!-- End .col-lg-7 -->
-      </div><!-- End .row -->
-    </div><!-- End .container -->
-  </div>
-  <!-- Our Packages Section End -->
-  
-  <!-- JavaScript for Package Slider -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const container = document.getElementById('packagesContainer');
-      const nextBtn = document.getElementById('nextBtn');
-      const prevBtn = document.getElementById('prevBtn');
-  
-      nextBtn.addEventListener('click', () => {
-        container.scrollBy({ left: 320, behavior: 'smooth' });
+              </div><!-- End .packages-container -->
+            </div><!-- End .slider-wrapper -->
+          </div><!-- End .col-lg-7 -->
+        </div><!-- End .row -->
+      </div><!-- End .container -->
+    </div>
+    <!-- Our Packages Section End -->
+
+    <!-- JavaScript for Package Slider -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const container = document.getElementById('packagesContainer');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+
+        nextBtn.addEventListener('click', () => {
+          container.scrollBy({ left: 320, behavior: 'smooth' });
+        });
+        prevBtn.addEventListener('click', () => {
+          container.scrollBy({ left: -320, behavior: 'smooth' });
+        });
       });
-      prevBtn.addEventListener('click', () => {
-        container.scrollBy({ left: -320, behavior: 'smooth' });
-      });
-    });
-  </script>
-  
+    </script>
 
     <!-- Therapist Team Section Start -->
     <div class="therapist-team bg-radius-section">
@@ -918,12 +888,6 @@
                                 <img src="doctorimage/1.png" alt="">
                             </figure>
                             <div class="team-social-icon">
-                                <!-- <ul>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                </ul> -->
                             </div>
                         </div>
                         <div class="team-content">
@@ -942,12 +906,6 @@
                                 <img src="doctorimage/2.png" alt="">
                             </figure>
                             <div class="team-social-icon">
-                                <!-- <ul>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                </ul> -->
                             </div>
                         </div>
                         <div class="team-content">
@@ -966,12 +924,6 @@
                                 <img src="doctorimage/5.jpeg" alt="">
                             </figure>
                             <div class="team-social-icon">
-                                <!-- <ul>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                </ul> -->
                             </div>
                         </div>
                         <div class="team-content">
@@ -990,12 +942,6 @@
                                 <img src="doctorimage/4.png" alt="">
                             </figure>
                             <div class="team-social-icon">
-                                <!-- <ul>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                </ul> -->
                             </div>
                         </div>
                         <div class="team-content">
@@ -1011,174 +957,173 @@
     <!-- Therapist Team Section End -->
 
     <!-- Our Testimonials Section Start -->
-   
-    <!-- Our Testimonials Section Start -->
-<div class="our-testimonial bg-radius-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5">
-          <div class="testimonial-content">
-            <!-- Section Title Start -->
-            <div class="section-title">
-              <h3 class="wow fadeInUp">client testimonials</h3>
-              <h2 class="text-anime-style-3" data-cursor="-opaque">Our Clients Reviews</h2>
-              <p class="wow fadeInUp" data-wow-delay="0.25s">
-                At Physiocare, we pride ourselves on providing exceptional physiotherapy services that deliver real results. But don't just take our word for it.
-              </p>
-            </div>
-            <!-- Section Title End -->
-          </div>
-        </div>
-  
-        <div class="col-lg-7">
-          <!-- Testimonial Slider Start -->
-          <div class="testimonial-slider">
-            <div class="swiper">
-              <div class="swiper-wrapper" data-cursor-text="Drag">
-                <!-- Slides will be generated dynamically from JSON data -->
+    <div class="our-testimonial bg-radius-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="testimonial-content">
+              <!-- Section Title Start -->
+              <div class="section-title">
+                <h3 class="wow fadeInUp">client testimonials</h3>
+                <h2 class="text-anime-style-3" data-cursor="-opaque">Our Clients Reviews</h2>
+                <p class="wow fadeInUp" data-wow-delay="0.25s">
+                  At Physiocare, we pride ourselves on providing exceptional physiotherapy services that deliver real results. But don't just take our word for it.
+                </p>
               </div>
-              <div class="testimonial-btn">
-                <div class="testimonial-button-prev"></div>
-                <div class="testimonial-button-next"></div>
-              </div>
+              <!-- Section Title End -->
             </div>
           </div>
-          <!-- Testimonial Slider End -->
+
+          <div class="col-lg-7">
+            <!-- Testimonial Slider Start -->
+            <div class="testimonial-slider">
+              <div class="swiper">
+                <div class="swiper-wrapper" data-cursor-text="Drag">
+                  <!-- Slides will be generated dynamically from JSON data -->
+                </div>
+                <div class="testimonial-btn">
+                  <div class="testimonial-button-prev"></div>
+                  <div class="testimonial-button-next"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial Slider End -->
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Our Testimonials Section End -->
-  
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const reviews = [
-        {
-          "reviewerName": "Zuber Sable",
-          "profileImage": "https://lh3.googleusercontent.com/a-/ALV-UjV33XUE1Tb0Wehq35Twe8IRgRQiEdSD7agCHO9CJLZX2Fict-O6kQ=s40-c-rp-mo-br100",
-          "rating": "5.0",
-          "reviewTime": "6 days ago",
-          "reviewText": "Excellent staff, services, atmosphere, technics.All staff are well mannered and responsive.Dr. Mudassar is best",
-          "ownerResponse": ""
-        },
-        {
-          "reviewerName": "Zeenat kazi",
-          "profileImage": "https://lh3.googleusercontent.com/a/ACg8ocJbPqXmexmuKhf3ggBU4YgJ54zMhBiL2S0l9Op0Ua55T_8VgQ=s40-c-rp-mo-br100",
-          "rating": "5.0",
-          "reviewTime": "a week ago",
-          "reviewText": "nice treatment and good facility's .",
-          "ownerResponse": "Dear Zeenat Kazi,Thank you for your feedback. We are pleased to hear that you were satisfied with the treatment and facilities. Your support means a lot to us, and we look forward to serving you again in the future."
-        },
-        {
-          "reviewerName": "Abdul Wahab",
-          "profileImage": "https://lh3.googleusercontent.com/a/ACg8ocJexyjqWRUcGEXPQX9Ov_i5WoPR54MYFR_FNV97d6DdZLA9vA=s40-c-rp-mo-br100",
-          "rating": "5.0",
-          "reviewTime": "a week ago",
-          "reviewText": "Best service in medzeal physiotherapy centre in mumbra plz visit",
-          "ownerResponse": ""
-        },
-        {
-          "reviewerName": "zeba khan",
-          "profileImage": "https://lh3.googleusercontent.com/a-/ALV-UjWZng-aeaQnlZ_OiIsJemYUjVKqLxVOhGWTNBA3L7w4PrJq226x=s40-c-rp-mo-br100",
-          "rating": "5.0",
-          "reviewTime": "a week ago",
-          "reviewText": "I would like to thank Dr. Shahar for the amazing skin pigmentation treatment. ",
-          "ownerResponse": ""
-        },
-        {
-          "reviewerName": "Sharada Tayde",
-          "profileImage": "https://lh3.googleusercontent.com/a/ACg8ocJf4B1l0JgI82lKcVPvonDt4KfjvJO1aJYMNIsQE9sOmtuemQ=s40-c-rp-mo-br100",
-          "rating": "5.0",
-          "reviewTime": "a week ago",
-          "reviewText": "",
-          "ownerResponse": ""
-        },
-        {
-          "reviewerName": "Janvi Gupta",
-          "profileImage": "https://lh3.googleusercontent.com/a-/ALV-UjU1vP6AkmwsXNvaqe0b8Ejb-AuzPy4c9RLQh4TTVokHIKUmN4o=s40-c-rp-mo-br100",
-          "rating": "5.0",
-          "reviewTime": "a week ago",
-          "reviewText": "Very nice treatment",
-          "ownerResponse": ""
-        },
-        {
-          "reviewerName": "Nuzhat Kagzi007",
-          "profileImage": "https://lh3.googleusercontent.com/a/ACg8ocLyWM3yzPIfn0m6_PEQE63cO7r2tCy5g7R2HqMhoLMZpk9w6Q=s40-c-rp-mo-br100",
-          "rating": "5.0",
-          "reviewTime": "a week ago",
-          "reviewText": "Good job helpfull staff",
-          "ownerResponse": ""
-        },
-        {
-          "reviewerName": "Kayyum khan",
-          "profileImage": "https://lh3.googleusercontent.com/a/ACg8ocJ2gMXDoqBrBPxg9ihTe4S5AIgBEuTmHgZb3fyAa0TBzEx2zQ=s40-c-rp-mo-br100",
-          "rating": "5.0",
-          "reviewTime": "a week ago",
-          "reviewText": "",
-          "ownerResponse": ""
-        },
-        {
-          "reviewerName": "Farida Khan",
-          "profileImage": "https://lh3.googleusercontent.com/a/ACg8ocIno6jHi_AzswEAZjkgUli7Oceftz-S_HTcYSE1HV5vE_mgHw=s40-c-rp-mo-br100",
-          "rating": "5.0",
-          "reviewTime": "a week ago",
-          "reviewText": "I had a pimples and dark spots on my face. I consulted many doctors but...",
-          "ownerResponse": ""
-        },
-        {
-          "reviewerName": "Fazal Lakhani",
-          "profileImage": "https://lh3.googleusercontent.com/a/ACg8ocLR85CFo5-ZCXOO-tSK2HcrBrSdCbisGj_9tovdy_GNYH2sSpU=s40-c-rp-mo-br100",
-          "rating": "5.0",
-          "reviewTime": "a week ago",
-          "reviewText": "",
-          "ownerResponse": ""
-        }
-      ];
-  
-      const swiperWrapper = document.querySelector('.swiper-wrapper');
-  
-      reviews.forEach(review => {
-        const slide = document.createElement('div');
-        slide.classList.add('swiper-slide');
-  
-        // Generate star icons based on rating (assumes rating is out of 5)
-        let starHTML = '';
-        const rating = parseFloat(review.rating);
-        for (let i = 0; i < Math.floor(rating); i++) {
-          starHTML += '<i class="fa-solid fa-star"></i>';
-        }
-  
-        slide.innerHTML = `
-          <div class="testimonial-item">
-            <div class="testimonial-header">
-              <div class="testimonial-rating">
-                ${starHTML}
-              </div>
-              <div class="testimonial-content">
-                <p>${review.reviewText ? review.reviewText : 'No review text provided.'}</p>
-              </div>
-            </div>
-            <div class="testimonial-body">
-              <div class="author-image">
-                <figure class="image-anime">
-                  <img src="${review.profileImage}" alt="${review.reviewerName}">
-                </figure>
-              </div>            
-              <div class="author-content">
-                <h3>${review.reviewerName}</h3>
-                <p>${review.reviewTime}</p>
-              </div>
-            </div>
-          </div>
-        `;
-        swiperWrapper.appendChild(slide);
-      });
-    });
-  </script>
-  
     <!-- Our Testimonials Section End -->
 
+    <!-- Dynamic Reviews Data -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const reviews = [
+          {
+            "reviewerName": "Zuber Sable",
+            "profileImage": "https://lh3.googleusercontent.com/a-/ALV-UjV33XUE1Tb0Wehq35Twe8IRgRQiEdSD7agCHO9CJLZX2Fict-O6kQ=s40-c-rp-mo-br100",
+            "rating": "5.0",
+            "reviewTime": "6 days ago",
+            "reviewText": "Excellent staff, services, atmosphere, technics.All staff are well mannered and responsive.Dr. Mudassar is best",
+            "ownerResponse": ""
+          },
+          {
+            "reviewerName": "Zeenat kazi",
+            "profileImage": "https://lh3.googleusercontent.com/a/ACg8ocJbPqXmexmuKhf3ggBU4YgJ54zMhBiL2S0l9Op0Ua55T_8VgQ=s40-c-rp-mo-br100",
+            "rating": "5.0",
+            "reviewTime": "a week ago",
+            "reviewText": "nice treatment and good facility's .",
+            "ownerResponse": "Dear Zeenat Kazi,Thank you for your feedback. We are pleased to hear that you were satisfied with the treatment and facilities. Your support means a lot to us, and we look forward to serving you again in the future."
+          },
+          {
+            "reviewerName": "Abdul Wahab",
+            "profileImage": "https://lh3.googleusercontent.com/a/ACg8ocJexyjqWRUcGEXPQX9Ov_i5WoPR54MYFR_FNV97d6DdZLA9vA=s40-c-rp-mo-br100",
+            "rating": "5.0",
+            "reviewTime": "a week ago",
+            "reviewText": "Best service in medzeal physiotherapy centre in mumbra plz visit",
+            "ownerResponse": ""
+          },
+          {
+            "reviewerName": "zeba khan",
+            "profileImage": "https://lh3.googleusercontent.com/a-/ALV-UjWZng-aeaQnlZ_OiIsJemYUjVKqLxVOhGWTNBA3L7w4PrJq226x=s40-c-rp-mo-br100",
+            "rating": "5.0",
+            "reviewTime": "a week ago",
+            "reviewText": "I would like to thank Dr. Shahar for the amazing skin pigmentation treatment. ",
+            "ownerResponse": ""
+          },
+          {
+            "reviewerName": "Sharada Tayde",
+            "profileImage": "https://lh3.googleusercontent.com/a/ACg8ocJf4B1l0JgI82lKcVPvonDt4KfjvJO1aJYMNIsQE9sOmtuemQ=s40-c-rp-mo-br100",
+            "rating": "5.0",
+            "reviewTime": "a week ago",
+            "reviewText": "",
+            "ownerResponse": ""
+          },
+          {
+            "reviewerName": "Janvi Gupta",
+            "profileImage": "https://lh3.googleusercontent.com/a-/ALV-UjU1vP6AkmwsXNvaqe0b8Ejb-AuzPy4c9RLQh4TTVokHIKUmN4o=s40-c-rp-mo-br100",
+            "rating": "5.0",
+            "reviewTime": "a week ago",
+            "reviewText": "Very nice treatment",
+            "ownerResponse": ""
+          },
+          {
+            "reviewerName": "Nuzhat Kagzi007",
+            "profileImage": "https://lh3.googleusercontent.com/a/ACg8ocLyWM3yzPIfn0m6_PEQE63cO7r2tCy5g7R2HqMhoLMZpk9w6Q=s40-c-rp-mo-br100",
+            "rating": "5.0",
+            "reviewTime": "a week ago",
+            "reviewText": "Good job helpfull staff",
+            "ownerResponse": ""
+          },
+          {
+            "reviewerName": "Kayyum khan",
+            "profileImage": "https://lh3.googleusercontent.com/a/ACg8ocJ2gMXDoqBrBPxg9ihTe4S5AIgBEuTmHgZb3fyAa0TBzEx2zQ=s40-c-rp-mo-br100",
+            "rating": "5.0",
+            "reviewTime": "a week ago",
+            "reviewText": "",
+            "ownerResponse": ""
+          },
+          {
+            "reviewerName": "Farida Khan",
+            "profileImage": "https://lh3.googleusercontent.com/a/ACg8ocIno6jHi_AzswEAZjkgUli7Oceftz-S_HTcYSE1HV5vE_mgHw=s40-c-rp-mo-br100",
+            "rating": "5.0",
+            "reviewTime": "a week ago",
+            "reviewText": "I had a pimples and dark spots on my face. I consulted many doctors but...",
+            "ownerResponse": ""
+          },
+          {
+            "reviewerName": "Fazal Lakhani",
+            "profileImage": "https://lh3.googleusercontent.com/a/ACg8ocLR85CFo5-ZCXOO-tSK2HcrBrSdCbisGj_9tovdy_GNYH2sSpU=s40-c-rp-mo-br100",
+            "rating": "5.0",
+            "reviewTime": "a week ago",
+            "reviewText": "",
+            "ownerResponse": ""
+          }
+        ];
+
+        const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+        reviews.forEach(review => {
+          const slide = document.createElement('div');
+          slide.classList.add('swiper-slide');
+
+          // Generate star icons based on rating (assumes rating is out of 5)
+          let starHTML = '';
+          const rating = parseFloat(review.rating);
+          for (let i = 0; i < Math.floor(rating); i++) {
+            starHTML += '<i class="fa-solid fa-star"></i>';
+          }
+
+          slide.innerHTML = `
+            <div class="testimonial-item">
+              <div class="testimonial-header">
+                <div class="testimonial-rating">
+                  ${starHTML}
+                </div>
+                <div class="testimonial-content">
+                  <p>${review.reviewText ? review.reviewText : 'No review text provided.'}</p>
+                </div>
+              </div>
+              <div class="testimonial-body">
+                <div class="author-image">
+                  <figure class="image-anime">
+                    <img src="${review.profileImage}" alt="${review.reviewerName}">
+                  </figure>
+                </div>
+                <div class="author-content">
+                  <h3>${review.reviewerName}</h3>
+                  <p>${review.reviewTime}</p>
+                </div>
+              </div>
+            </div>
+          `;
+          swiperWrapper.appendChild(slide);
+        });
+      });
+    </script>
+
+    <!-- Spacing before footer -->
     <div style="margin-top: 100px;"></div>
+
     <!-- Footer Start -->
     <footer class="main-footer bg-radius-section">
         <div class="container">
@@ -1238,7 +1183,7 @@
                                 <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>                                                                
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                             </ul>
                         </div>
                         <!-- Footer Quick Links End -->
@@ -1248,7 +1193,6 @@
                             <h3>working hours</h3>
                             <ul>
                                 <li>Mon to Sat : 10:00am to 10:00pm</li>
-                                 
                                 <li>sun : closed</li>
                             </ul>
                         </div>
@@ -1304,6 +1248,32 @@
     </footer>
     <!-- Footer End -->
 
+    <!-- ========== FLOATING POP-UP START ========== -->
+    <div class="popup-container" id="rotatingPopup">
+      <p class="popup-message" id="popupMessage">Don't let pain drive you crazy – hop on board with Medzeal and ride to recovery!</p>
+      <a href="/appoinment/" class="popup-btn">Book Appointment</a>
+    </div>
+
+    <script>
+      // Array of comedic messages
+      const messages = [
+        "Don't let pain drive you crazy – hop on board with Medzeal and ride to recovery!",
+        "Why hobble alone? Medzeal's here to help you stand tall again!",
+        "Aches can't hide from our magic! Book an appointment now!",
+        "Kick pain to the curb – Medzeal's your new best friend!"
+      ];
+
+      let currentIndex = 0;
+      const popupMessage = document.getElementById("popupMessage");
+
+      // Function to rotate messages every 5 seconds
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % messages.length;
+        popupMessage.textContent = messages[currentIndex];
+      }, 5000);
+    </script>
+    <!-- ========== FLOATING POP-UP END ========== -->
+
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->
@@ -1335,7 +1305,7 @@
     <script src="js/wow.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
-	<script src="js/theme-panel.js"></script>
+	  <script src="js/theme-panel.js"></script>
 
 </body>
 </html>
