@@ -36,7 +36,7 @@
                                 Mumbra Bypass</a></li>
                         </ul>
                     </div>
-                    </div>
+                </div>
 
                 <div class="col-lg-3 col-md-0">
                     <div class="topbar-social-links">
@@ -47,7 +47,7 @@
                             <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
                         </ul>
                     </div>
-                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -70,7 +70,7 @@
                         <div class="header-btn d-inline-flex">
                             <a href="tel: +917044178786" class="btn-default"><span> +91 70441 78786</span></a>
                         </div>
-                        </div>
+                    </div>
                     <div class="navbar-toggle"></div>
                 </div>
             </nav>
@@ -90,7 +90,7 @@
                             </ol>
                         </nav>
                     </div>
-                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -102,7 +102,7 @@
                         <h3 class="wow fadeInUp">appointment</h3>
                         <h2 class="text-anime-style-3" data-cursor="-opaque">Make an appointment</h2>
                     </div>
-                    </div>
+                </div>
             </div>
 
             <div class="row">
@@ -143,12 +143,10 @@
                                         </optgroup>
                                         <optgroup label="Wellness Center">
                                             <option value="Massage Therapy">Massage Therapy</option>
-                                            
                                             <option value="Yoga">Yoga</option>
                                             <option value="Acupuncture">Acupuncture</option>
                                             <option value="Clinical Nutrition Counselling">Clinical Nutrition Counselling</option>
                                             <option value="VR Therapy">VR Therapy</option>
-                                            <!-- <option value="Sensory Desensitization">Sensory Desensitization</option> -->
                                             <option value="De-addiction Programs">De-addiction Programs</option>
                                             <option value="Hijama Therapy">Hijama Therapy</option>
                                             <option value="Chiropractic Services">Chiropractic Services</option>
@@ -188,7 +186,7 @@
                             </div>
                         </form>
                     </div>
-                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -201,7 +199,7 @@
                         <h2 class="text-anime-style-3" data-cursor="-opaque">Easy Steps To Get Our Services</h2>
                         <p>we strive to make accessing our services as straightforward and convenient as possible. Here’s a simple guide to help you get started with our expert care.</p>
                     </div>
-                    </div>
+                </div>
             </div>
 
             <div class="row">
@@ -255,8 +253,8 @@
                                 <p>Your journey is an important step towards better health.</p>
                             </div>
                         </div>
-                        </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
@@ -270,16 +268,16 @@
                                 <div class="footer-logo">
                                     <img src="images/logobg.png" alt="">
                                 </div>
-                                </div>
+                            </div>
 
                             <div class="col-lg-8">
                                 <div class="about-footer-content">
                                     <h3>Best Physiotherapy & Dermatology centre in the Thane</h3>
                                     <p>We understand that injuries and acute pain can happen unexpectedly. Our emergency physiotherapy & dermatology We understand that injuries and acute pain can happen.</p>
                                 </div>
-                                </div>
+                            </div>
                         </div>                        
-                     </div>
+                    </div>
                     <div class="about-footer-list">
                         <div class="footer-links quick-links">
                             <h3>quick links</h3>
@@ -310,7 +308,6 @@
                             <h3>working hours</h3>
                             <ul>
                                 <li>Mon to Sat : 10:00am to 10:00pm</li>
-                                 
                                 <li>sun : closed</li>
                             </ul>
                         </div>
@@ -333,7 +330,7 @@
                                         <p>medzealpcw@gmail.com</p>
                                     </div>
                                 </div>
-                                </div>
+                            </div>
                         </div>
                         <div class="footer-links terms-condition-links">
                             <div class="footer-copyright-text">
@@ -346,8 +343,8 @@
                                 </ul>
                             </div>
                         </div>                        
-                        </div>
-                    </div>                
+                    </div>
+                </div>                
             </div>
         </div>
     </footer>
@@ -373,22 +370,15 @@
     <script>
       window.addEventListener("DOMContentLoaded", function() {
         const params = new URLSearchParams(window.location.search);
-
-        // Look for 'test' or 'package' (whichever exists)
         const testParamValue = params.get('test');
         const packageParamValue = params.get('package');
         const paramValue = testParamValue || packageParamValue;
 
-        // If found, attempt to auto-select it in the dropdown
         if(paramValue) {
           const servicesDropdown = document.getElementById('services');
-          
-          // Loop through all options to find a case-insensitive match
           for (let i = 0; i < servicesDropdown.options.length; i++) {
             if (servicesDropdown.options[i].value.toLowerCase() === paramValue.toLowerCase()) {
               servicesDropdown.selectedIndex = i;
-              
-              // If param is "Other", display the Other Service field
               if (paramValue.toLowerCase() === 'other') {
                 document.getElementById("otherServiceContainer").style.display = "block";
               }
@@ -397,7 +387,6 @@
           }
         }
 
-        // Show/hide "Other" text field on manual dropdown change
         const servicesDropdown = document.getElementById('services');
         servicesDropdown.addEventListener("change", function() {
           if (this.value === "Other") {
@@ -407,25 +396,21 @@
           }
         });
         
-        // Function to set default date and time
         function setDefaultDateTime() {
             const now = new Date();
             const dateField = document.getElementById("bookingDate");
             const timeField = document.getElementById("bookingTime");
 
-            // Format date as YYYY-MM-DD
             const year = now.getFullYear();
             const month = (now.getMonth() + 1).toString().padStart(2, '0');
             const day = now.getDate().toString().padStart(2, '0');
             dateField.value = `${year}-${month}-${day}`;
 
-            // Format time as HH:mm
             const hours = now.getHours().toString().padStart(2, '0');
             const minutes = now.getMinutes().toString().padStart(2, '0');
             timeField.value = `${hours}:${minutes}`;
         }
 
-        // Set default date and time on page load
         setDefaultDateTime();
       });
     </script>
@@ -433,7 +418,6 @@
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
     <script>
-      // Your web app's Firebase configuration
       const firebaseConfig = {
         apiKey: "AIzaSyBbLohk17rZT8-BfXhsRvzhq9C-eAVkCWk",
         authDomain: "medzeal-c5d31.firebaseapp.com",
@@ -443,54 +427,62 @@
         messagingSenderId: "222700687597",
         appId: "1:222700687597:web:2eaa3fab44711b6a79fce4"
       };
-      // Initialize Firebase
+      
       firebase.initializeApp(firebaseConfig);
       const database = firebase.database();
 
-      // Form submission event
       document.getElementById("appointmentForm").addEventListener("submit", function(e) {
           e.preventDefault();
           
-          // Get form values
           const name = document.getElementById("name").value.trim();
           const phone = document.getElementById("phone").value.trim();
           const bookingDate = document.getElementById("bookingDate").value;
-          const bookingTime = document.getElementById("bookingTime").value;
+          const bookingTime24 = document.getElementById("bookingTime").value;
           const service = document.getElementById("services").value;
           const coupon = document.getElementById("coupon").value.trim();
           const message = document.getElementById("message").value.trim();
-          
-          // Additional validation for date and time fields
-          if (!bookingDate || !bookingTime) {
+
+          if (!bookingDate || !bookingTime24) {
               alert("Please select a date and time for your appointment.");
               return;
           }
 
-          // Validate phone: exactly 10 digits
           const phonePattern = /^[0-9]{10}$/;
           if(!phonePattern.test(phone)) {
               alert("Please enter a valid 10-digit phone number.");
               return;
           }
 
-          // Appointment data object
+          // Convert YYYY-MM-DD to DD/MM/YYYY
+          const [year, month, day] = bookingDate.split('-');
+          const bookingDateFormatted = `${day}/${month}/${year}`;
+
+          // Convert 24-hour time to 12-hour format with seconds and AM/PM
+          const [hours, minutes] = bookingTime24.split(':');
+          const now = new Date();
+          now.setHours(hours, minutes, now.getSeconds());
+          const bookingTimeFormatted = now.toLocaleTimeString('en-IN', {
+              hour: '2-digit',
+              minute: '2-digit',
+              second: '2-digit',
+              hour12: true
+          });
+
           const appointmentData = {
               name: name,
               phone: phone,
               service: service,
               coupon: coupon,
               message: message,
-              submissionDate: bookingDate,
-              submissionTime: bookingTime
+              submissionDate: bookingDateFormatted,
+              submissionTime: bookingTimeFormatted
           };
 
-          // Push the new appointment data to Firebase Realtime Database
           database.ref("userappoinment").push(appointmentData, function(error) {
               if (error) {
                   alert("Data could not be saved: " + error);
               } else {
                   alert("Appointment booked successfully!");
-                  // Reset the form
                   document.getElementById("appointmentForm").reset();
                   document.getElementById("otherServiceContainer").style.display = "none";
               }
