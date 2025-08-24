@@ -467,6 +467,19 @@
               second: '2-digit',
               hour12: true
           });
+          
+          // Get the current timestamp in Asia/Kolkata time zone
+          const kolkataTimeOptions = {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false,
+            timeZone: 'Asia/Kolkata'
+          };
+          const createAt = new Date().toLocaleString('en-IN', kolkataTimeOptions);
 
           const appointmentData = {
               name: name,
@@ -474,8 +487,9 @@
               service: service,
               coupon: coupon,
               message: message,
-              submissionDate: bookingDateFormatted,
-              submissionTime: bookingTimeFormatted
+              appointmentDate: bookingDateFormatted,
+              appointmentTime: bookingTimeFormatted,
+              create_at: createAt
           };
 
           database.ref("userappoinment").push(appointmentData, function(error) {
